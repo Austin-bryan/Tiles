@@ -1,0 +1,53 @@
+﻿Level Info Format:
+RowCountxColumnCount, ShuffleCount, GameMode(param1, param2) ex: 3x3, 5, Move(4)
+
+Tile Info Format:
+Color.<{Type1(Param 1, Param2), Type2}>, <Type3>						     ex: <r.{br(3, s), ir.10}, b.{ca, ba}>[u, d]		
+Color.{Type1(Param1, Param2), ... TypeN(Param1, Param2)} [MovableDirections] ex: r.{br(3, s), ir.10}[u, d]
+Color.{Type1.Param, Type2.Param, ... TypeN.Param} [MovableDirections]        ex: r.{ce(50), ir.10}[u]
+Color.Type.Param [MovableDirections]                                         ex: r.ir(10)[u, d]
+Color.Type.Param                                                             ex: r.ir(10) or r.ir.10
+Color.Type [MovableDirection]                                                ex: r.ca[d]
+Color.Type                                                                   ex: r.ca
+Color                                                                        ex: r
+TileNumber                                                                   ex: r*6
+Tile-                                                                        ex: r-
+Tile|                                                                        ex: r|
+
+r[u, d]
+r.ca[l, r]
+r.ir.4[l, r]
+r.br(b, 10)[u, d]
+r.{ir.10, ca}[u, l, r]
+r.<{br(b, 10), ir.10, ca}, {ba, ca}>[u, d]
+
+.      - used if only one type
+.{}    - indicates multiple types
+Type.  - indicates only one parameter for type
+Type() - indicates multiple parameters for type
+[]     - indicates one or more directions
+<>	   - indicates one or more side
+If no directions are present, assumed can travel in all
+If no type is present, assumed to be normal
+
+Shorthand Syntax:
+TileNumber - indicates to use that color (and all its properties) as many times as specifed. 
+  r*6 = r/r/r/r/r/r/
+  r.{ir.5, ca}*6 = r.{ir.5, ca}/r.{ir.5, ca}/r.{ir.5, ca}/r.{ir.5, ca}/r.{ir.5, ca}/r.{ir.5, ca}
+Tile- - indicates to fill the remainder of that row with that color (and all its properties)
+  3x3 | r-b-g-; = 3x3 | r/r/r/ b/b/b/ g/g/g;
+  5s  | r-b-g-b-y/y/pi-; = 5x5 | r/r/r/r/r/ b/b/b/b/b/ g/g/g/g/g/ b/b/b/b/b/ y/y/pi/pi/pi;
+Tile| - indicates to fill the remainder of that column with that color (and all its properties)
+  3s  | r|b|g|; = 3x3 | r/b/g/ r/b/g/ r/b/g;
+Size s  - indicates to make a square. 3s = 3x3
+Tile[v] - shorthand for Tile[u, d]
+Tile[h] - shorthand for Tile[l, r]
+
+Examples: 
+3x3, 10, Move(10) | r-b-b-;					// 3x3 Board, 10 shuffles, game mode is moves and ten moves are available. The top row is red, and the 2nd and third rows are blue.
+<r.{br(3, s), ir.10}, b.{ca, ba}>[u, d]		// Side 1 is a red tile and contains a siler brick with 3 moves, and iron with ten moves. Side 2 is a blue camo balloon. It can only move up and down	
+
+<r{ca, ba}, b{ca, ic}>
+<r, b>
+r.l
+r{ir(4, grid)}

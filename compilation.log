@@ -1,0 +1,1140 @@
+********************************************************************************
+*                   Wednesday, November 27, 2019 8:14:15 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.4.228
+Unity version: 2017.4.30f1
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: E:\Game Dev C\Tiles
+Target profile directory: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5
+Unity Mono executable: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.7.0.62620)
+
+- Compilation ------------------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-b4047a18a1a376e478266c1b19f74330
+Exit code: 0
+Elapsed time: 4.29 sec
+
+- Output (42 lines):
+0: Assets\Scripts\Boards\PlayerBoard.cs(14,17): warning CS0108: 'PlayerBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+1: Assets\Scripts\Boards\TargetBoard.cs(5,17): warning CS0108: 'TargetBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+2: Assets\Scripts\Parsing\ParseManager.cs(145,21): warning CS0219: The variable 'charsRemaining' is assigned but its value is never used
+3: Assets\Scripts\Parsing\ParseManager.cs(309,18): warning CS0219: The variable 'c' is assigned but its value is never used
+4: Assets\Scripts\UI\PageTab.cs(30,28): warning CS0649: Field 'PageTab.selectedColor' is never assigned to, and will always have its default value
+5: Assets\Scripts\Creator\CreatorManager.cs(33,26): warning CS0649: Field 'CreatorManager.SeedText' is never assigned to, and will always have its default value null
+6: Assets\Scripts\Helpers\TileSprites.cs(22,21): warning CS0649: Field 'TileSprites.battery3' is never assigned to, and will always have its default value null
+7: Assets\Scripts\Creator\ParameterGetter.cs(11,43): warning CS0649: Field 'ParameterGetter.ironCount' is never assigned to, and will always have its default value null
+8: Assets\Scripts\Managers\SwipeManager.cs(14,70): warning CS0067: The event 'SwipeManager.swag' is never used
+9: Assets\Scripts\Helpers\TileSprites.cs(10,21): warning CS0649: Field 'TileSprites.knight' is never assigned to, and will always have its default value null
+10: Assets\Scripts\Creator\ParameterGetter.cs(12,73): warning CS0649: Field 'ParameterGetter.amethystButton' is never assigned to, and will always have its default value null
+11: Assets\Scripts\UI\LevelSelector.cs(11,41): warning CS0649: Field 'LevelSelector._selector' is never assigned to, and will always have its default value null
+12: Assets\Scripts\Helpers\TileSprites.cs(21,21): warning CS0649: Field 'TileSprites.battery2' is never assigned to, and will always have its default value null
+13: Assets\Scripts\Helpers\TileSprites.cs(24,21): warning CS0649: Field 'TileSprites.battery5' is never assigned to, and will always have its default value null
+14: Assets\Scripts\Tiles\PlayerTile.cs(31,38): warning CS0649: Field 'PlayerTile.nextMode' is never assigned to, and will always have its default value
+15: Assets\Scripts\Creator\ParameterGetter.cs(11,66): warning CS0649: Field 'ParameterGetter.amethystCount' is never assigned to, and will always have its default value null
+16: Assets\Scripts\Creator\ParameterGetter.cs(11,54): warning CS0649: Field 'ParameterGetter.steelCount' is never assigned to, and will always have its default value null
+17: Assets\Scripts\Helpers\TileSprites.cs(13,21): warning CS0649: Field 'TileSprites.queen' is never assigned to, and will always have its default value null
+18: Assets\Scripts\Helpers\TileSprites.cs(8,21): warning CS0649: Field 'TileSprites.pawn' is never assigned to, and will always have its default value null
+19: Assets\Scripts\Helpers\TileSprites.cs(9,21): warning CS0649: Field 'TileSprites.rook' is never assigned to, and will always have its default value null
+20: Assets\Scripts\Managers\LevelManager.cs(9,18): warning CS0649: Field 'LevelManager.levelText' is never assigned to, and will always have its default value null
+21: Assets\Scripts\Helpers\TileSprites.cs(11,21): warning CS0649: Field 'TileSprites.bishop' is never assigned to, and will always have its default value null
+22: Assets\Scripts\UI\InGameMenu.cs(11,41): warning CS0649: Field 'InGameMenu.exitPanel' is never assigned to, and will always have its default value null
+23: Assets\Scripts\UI\InGameUI.cs(10,35): warning CS0649: Field 'InGameUI._limiterText' is never assigned to, and will always have its default value null
+24: Assets\Scripts\Helpers\TileSprites.cs(17,21): warning CS0649: Field 'TileSprites.normal' is never assigned to, and will always have its default value null
+25: Assets\Scripts\Helpers\TileSprites.cs(20,21): warning CS0649: Field 'TileSprites.battery1' is never assigned to, and will always have its default value null
+26: Assets\Scripts\Helpers\TileSprites.cs(16,21): warning CS0649: Field 'TileSprites.hybrid' is never assigned to, and will always have its default value null
+27: Assets\Scripts\Creator\ParameterGetter.cs(11,31): warning CS0649: Field 'ParameterGetter.brickCount' is never assigned to, and will always have its default value null
+28: Assets\Scripts\Helpers\TileSprites.cs(12,21): warning CS0649: Field 'TileSprites.king' is never assigned to, and will always have its default value null
+29: Assets\Scripts\Creator\ParameterGetter.cs(12,60): warning CS0649: Field 'ParameterGetter.steelButton' is never assigned to, and will always have its default value null
+30: Assets\Scripts\UI\InGameMenu.cs(10,41): warning CS0649: Field 'InGameMenu.menuPanel' is never assigned to, and will always have its default value null
+31: Assets\Scripts\Creator\ParameterGetter.cs(12,35): warning CS0649: Field 'ParameterGetter.brickButton' is never assigned to, and will always have its default value null
+32: Assets\Scripts\Creator\ParameterGetter.cs(12,48): warning CS0649: Field 'ParameterGetter.ironButton' is never assigned to, and will always have its default value null
+33: Assets\Scripts\Creator\CreatorManager.cs(29,26): warning CS0649: Field 'CreatorManager.TileImages' is never assigned to, and will always have its default value null
+34: Assets\Scripts\Creator\CreatorManager.cs(31,26): warning CS0649: Field 'CreatorManager.valueBoxes' is never assigned to, and will always have its default value null
+35: Assets\Scripts\Helpers\TileSprites.cs(23,21): warning CS0649: Field 'TileSprites.battery4' is never assigned to, and will always have its default value null
+36: Assets\Scripts\UI\PageTab.cs(28,28): warning CS0649: Field 'PageTab.image' is never assigned to, and will always have its default value null
+37: Assets\Scripts\UI\OutlineButton.cs(18,18): warning CS0414: The field 'OutlineButton.shouldUpdate' is assigned but its value is never used
+38: Assets\Scripts\Parsing\ParseState.cs(21,29): warning CS0414: The field 'ParseState.delete' is assigned but its value is never used
+39: Assets\Scripts\TileComponents\TabletComponent.cs(15,22): warning CS0414: The field 'TabletComponent.wasSwiped' is assigned but its value is never used
+40: Assets\Scripts\Tiles\Tile.cs(24,24): warning CS0414: The field 'Tile.colorUsesRemaining' is assigned but its value is never used
+41: Assets\Scripts\Creator\CreatorManager.cs(34,27): warning CS0414: The field 'CreatorManager.startBoardManager' is assigned but its value is never used
+
+- Errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.23 sec
+
+- Output (0 lines):
+
+- Errors (0 lines):
+
+********************************************************************************
+*                   Wednesday, November 27, 2019 8:14:35 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.4.228
+Unity version: 2017.4.30f1
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: E:\Game Dev C\Tiles
+Target profile directory: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5
+Unity Mono executable: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.7.0.62620)
+
+- Compilation ------------------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-ea69f0df1c0990847b521746ba6037fe
+Exit code: 0
+Elapsed time: 4.22 sec
+
+- Output (42 lines):
+0: Assets\Scripts\Boards\PlayerBoard.cs(14,17): warning CS0108: 'PlayerBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+1: Assets\Scripts\Boards\TargetBoard.cs(5,17): warning CS0108: 'TargetBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+2: Assets\Scripts\Parsing\ParseManager.cs(145,21): warning CS0219: The variable 'charsRemaining' is assigned but its value is never used
+3: Assets\Scripts\Parsing\ParseManager.cs(309,18): warning CS0219: The variable 'c' is assigned but its value is never used
+4: Assets\Scripts\Creator\ParameterGetter.cs(11,54): warning CS0649: Field 'ParameterGetter.steelCount' is never assigned to, and will always have its default value null
+5: Assets\Scripts\Helpers\TileSprites.cs(11,21): warning CS0649: Field 'TileSprites.bishop' is never assigned to, and will always have its default value null
+6: Assets\Scripts\Helpers\TileSprites.cs(22,21): warning CS0649: Field 'TileSprites.battery3' is never assigned to, and will always have its default value null
+7: Assets\Scripts\Helpers\TileSprites.cs(12,21): warning CS0649: Field 'TileSprites.king' is never assigned to, and will always have its default value null
+8: Assets\Scripts\Helpers\TileSprites.cs(20,21): warning CS0649: Field 'TileSprites.battery1' is never assigned to, and will always have its default value null
+9: Assets\Scripts\Managers\SwipeManager.cs(14,70): warning CS0067: The event 'SwipeManager.swag' is never used
+10: Assets\Scripts\Helpers\TileSprites.cs(9,21): warning CS0649: Field 'TileSprites.rook' is never assigned to, and will always have its default value null
+11: Assets\Scripts\UI\InGameMenu.cs(11,41): warning CS0649: Field 'InGameMenu.exitPanel' is never assigned to, and will always have its default value null
+12: Assets\Scripts\Creator\CreatorManager.cs(29,26): warning CS0649: Field 'CreatorManager.TileImages' is never assigned to, and will always have its default value null
+13: Assets\Scripts\Helpers\TileSprites.cs(16,21): warning CS0649: Field 'TileSprites.hybrid' is never assigned to, and will always have its default value null
+14: Assets\Scripts\Helpers\TileSprites.cs(10,21): warning CS0649: Field 'TileSprites.knight' is never assigned to, and will always have its default value null
+15: Assets\Scripts\Creator\ParameterGetter.cs(12,48): warning CS0649: Field 'ParameterGetter.ironButton' is never assigned to, and will always have its default value null
+16: Assets\Scripts\Creator\CreatorManager.cs(33,26): warning CS0649: Field 'CreatorManager.SeedText' is never assigned to, and will always have its default value null
+17: Assets\Scripts\Creator\ParameterGetter.cs(12,60): warning CS0649: Field 'ParameterGetter.steelButton' is never assigned to, and will always have its default value null
+18: Assets\Scripts\Helpers\TileSprites.cs(24,21): warning CS0649: Field 'TileSprites.battery5' is never assigned to, and will always have its default value null
+19: Assets\Scripts\Creator\ParameterGetter.cs(11,31): warning CS0649: Field 'ParameterGetter.brickCount' is never assigned to, and will always have its default value null
+20: Assets\Scripts\UI\InGameMenu.cs(10,41): warning CS0649: Field 'InGameMenu.menuPanel' is never assigned to, and will always have its default value null
+21: Assets\Scripts\Tiles\PlayerTile.cs(31,38): warning CS0649: Field 'PlayerTile.nextMode' is never assigned to, and will always have its default value
+22: Assets\Scripts\Creator\ParameterGetter.cs(12,73): warning CS0649: Field 'ParameterGetter.amethystButton' is never assigned to, and will always have its default value null
+23: Assets\Scripts\Helpers\TileSprites.cs(23,21): warning CS0649: Field 'TileSprites.battery4' is never assigned to, and will always have its default value null
+24: Assets\Scripts\Creator\ParameterGetter.cs(12,35): warning CS0649: Field 'ParameterGetter.brickButton' is never assigned to, and will always have its default value null
+25: Assets\Scripts\Creator\ParameterGetter.cs(11,43): warning CS0649: Field 'ParameterGetter.ironCount' is never assigned to, and will always have its default value null
+26: Assets\Scripts\UI\PageTab.cs(30,28): warning CS0649: Field 'PageTab.selectedColor' is never assigned to, and will always have its default value
+27: Assets\Scripts\UI\PageTab.cs(28,28): warning CS0649: Field 'PageTab.image' is never assigned to, and will always have its default value null
+28: Assets\Scripts\Creator\CreatorManager.cs(31,26): warning CS0649: Field 'CreatorManager.valueBoxes' is never assigned to, and will always have its default value null
+29: Assets\Scripts\UI\LevelSelector.cs(11,41): warning CS0649: Field 'LevelSelector._selector' is never assigned to, and will always have its default value null
+30: Assets\Scripts\Helpers\TileSprites.cs(17,21): warning CS0649: Field 'TileSprites.normal' is never assigned to, and will always have its default value null
+31: Assets\Scripts\Helpers\TileSprites.cs(8,21): warning CS0649: Field 'TileSprites.pawn' is never assigned to, and will always have its default value null
+32: Assets\Scripts\Helpers\TileSprites.cs(13,21): warning CS0649: Field 'TileSprites.queen' is never assigned to, and will always have its default value null
+33: Assets\Scripts\Managers\LevelManager.cs(9,18): warning CS0649: Field 'LevelManager.levelText' is never assigned to, and will always have its default value null
+34: Assets\Scripts\UI\InGameUI.cs(10,35): warning CS0649: Field 'InGameUI._limiterText' is never assigned to, and will always have its default value null
+35: Assets\Scripts\Helpers\TileSprites.cs(21,21): warning CS0649: Field 'TileSprites.battery2' is never assigned to, and will always have its default value null
+36: Assets\Scripts\Creator\ParameterGetter.cs(11,66): warning CS0649: Field 'ParameterGetter.amethystCount' is never assigned to, and will always have its default value null
+37: Assets\Scripts\Parsing\ParseState.cs(21,29): warning CS0414: The field 'ParseState.delete' is assigned but its value is never used
+38: Assets\Scripts\UI\OutlineButton.cs(18,18): warning CS0414: The field 'OutlineButton.shouldUpdate' is assigned but its value is never used
+39: Assets\Scripts\Creator\CreatorManager.cs(34,27): warning CS0414: The field 'CreatorManager.startBoardManager' is assigned but its value is never used
+40: Assets\Scripts\TileComponents\TabletComponent.cs(15,22): warning CS0414: The field 'TabletComponent.wasSwiped' is assigned but its value is never used
+41: Assets\Scripts\Tiles\Tile.cs(24,24): warning CS0414: The field 'Tile.colorUsesRemaining' is assigned but its value is never used
+
+- Errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.23 sec
+
+- Output (0 lines):
+
+- Errors (0 lines):
+
+********************************************************************************
+*                   Wednesday, November 27, 2019 8:16:03 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.4.228
+Unity version: 2017.4.30f1
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: E:\Game Dev C\Tiles
+Target profile directory: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5
+Unity Mono executable: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.7.0.62620)
+
+- Compilation ------------------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-e0f01a9e19307d846b3fb3f3714d5e3f
+Exit code: 0
+Elapsed time: 4.27 sec
+
+- Output (42 lines):
+0: Assets\Scripts\Boards\PlayerBoard.cs(14,17): warning CS0108: 'PlayerBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+1: Assets\Scripts\Boards\TargetBoard.cs(5,17): warning CS0108: 'TargetBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+2: Assets\Scripts\Parsing\ParseManager.cs(145,21): warning CS0219: The variable 'charsRemaining' is assigned but its value is never used
+3: Assets\Scripts\Parsing\ParseManager.cs(309,18): warning CS0219: The variable 'c' is assigned but its value is never used
+4: Assets\Scripts\UI\InGameUI.cs(10,35): warning CS0649: Field 'InGameUI._limiterText' is never assigned to, and will always have its default value null
+5: Assets\Scripts\Helpers\TileSprites.cs(11,21): warning CS0649: Field 'TileSprites.bishop' is never assigned to, and will always have its default value null
+6: Assets\Scripts\UI\InGameMenu.cs(10,41): warning CS0649: Field 'InGameMenu.menuPanel' is never assigned to, and will always have its default value null
+7: Assets\Scripts\Helpers\TileSprites.cs(23,21): warning CS0649: Field 'TileSprites.battery4' is never assigned to, and will always have its default value null
+8: Assets\Scripts\Helpers\TileSprites.cs(12,21): warning CS0649: Field 'TileSprites.king' is never assigned to, and will always have its default value null
+9: Assets\Scripts\Helpers\TileSprites.cs(9,21): warning CS0649: Field 'TileSprites.rook' is never assigned to, and will always have its default value null
+10: Assets\Scripts\UI\InGameMenu.cs(11,41): warning CS0649: Field 'InGameMenu.exitPanel' is never assigned to, and will always have its default value null
+11: Assets\Scripts\Helpers\TileSprites.cs(22,21): warning CS0649: Field 'TileSprites.battery3' is never assigned to, and will always have its default value null
+12: Assets\Scripts\UI\LevelSelector.cs(11,41): warning CS0649: Field 'LevelSelector._selector' is never assigned to, and will always have its default value null
+13: Assets\Scripts\Creator\ParameterGetter.cs(11,31): warning CS0649: Field 'ParameterGetter.brickCount' is never assigned to, and will always have its default value null
+14: Assets\Scripts\UI\PageTab.cs(28,28): warning CS0649: Field 'PageTab.image' is never assigned to, and will always have its default value null
+15: Assets\Scripts\Creator\CreatorManager.cs(33,26): warning CS0649: Field 'CreatorManager.SeedText' is never assigned to, and will always have its default value null
+16: Assets\Scripts\Creator\ParameterGetter.cs(12,60): warning CS0649: Field 'ParameterGetter.steelButton' is never assigned to, and will always have its default value null
+17: Assets\Scripts\Creator\ParameterGetter.cs(12,73): warning CS0649: Field 'ParameterGetter.amethystButton' is never assigned to, and will always have its default value null
+18: Assets\Scripts\Creator\ParameterGetter.cs(11,54): warning CS0649: Field 'ParameterGetter.steelCount' is never assigned to, and will always have its default value null
+19: Assets\Scripts\Creator\ParameterGetter.cs(12,48): warning CS0649: Field 'ParameterGetter.ironButton' is never assigned to, and will always have its default value null
+20: Assets\Scripts\Creator\CreatorManager.cs(31,26): warning CS0649: Field 'CreatorManager.valueBoxes' is never assigned to, and will always have its default value null
+21: Assets\Scripts\Managers\LevelManager.cs(9,18): warning CS0649: Field 'LevelManager.levelText' is never assigned to, and will always have its default value null
+22: Assets\Scripts\Helpers\TileSprites.cs(24,21): warning CS0649: Field 'TileSprites.battery5' is never assigned to, and will always have its default value null
+23: Assets\Scripts\Helpers\TileSprites.cs(16,21): warning CS0649: Field 'TileSprites.hybrid' is never assigned to, and will always have its default value null
+24: Assets\Scripts\Helpers\TileSprites.cs(8,21): warning CS0649: Field 'TileSprites.pawn' is never assigned to, and will always have its default value null
+25: Assets\Scripts\Helpers\TileSprites.cs(10,21): warning CS0649: Field 'TileSprites.knight' is never assigned to, and will always have its default value null
+26: Assets\Scripts\Helpers\TileSprites.cs(17,21): warning CS0649: Field 'TileSprites.normal' is never assigned to, and will always have its default value null
+27: Assets\Scripts\UI\PageTab.cs(30,28): warning CS0649: Field 'PageTab.selectedColor' is never assigned to, and will always have its default value
+28: Assets\Scripts\Helpers\TileSprites.cs(21,21): warning CS0649: Field 'TileSprites.battery2' is never assigned to, and will always have its default value null
+29: Assets\Scripts\Helpers\TileSprites.cs(20,21): warning CS0649: Field 'TileSprites.battery1' is never assigned to, and will always have its default value null
+30: Assets\Scripts\Creator\ParameterGetter.cs(11,66): warning CS0649: Field 'ParameterGetter.amethystCount' is never assigned to, and will always have its default value null
+31: Assets\Scripts\Helpers\TileSprites.cs(13,21): warning CS0649: Field 'TileSprites.queen' is never assigned to, and will always have its default value null
+32: Assets\Scripts\Creator\ParameterGetter.cs(12,35): warning CS0649: Field 'ParameterGetter.brickButton' is never assigned to, and will always have its default value null
+33: Assets\Scripts\Tiles\PlayerTile.cs(31,38): warning CS0649: Field 'PlayerTile.nextMode' is never assigned to, and will always have its default value
+34: Assets\Scripts\Creator\CreatorManager.cs(29,26): warning CS0649: Field 'CreatorManager.TileImages' is never assigned to, and will always have its default value null
+35: Assets\Scripts\Creator\ParameterGetter.cs(11,43): warning CS0649: Field 'ParameterGetter.ironCount' is never assigned to, and will always have its default value null
+36: Assets\Scripts\Managers\SwipeManager.cs(14,70): warning CS0067: The event 'SwipeManager.swag' is never used
+37: Assets\Scripts\TileComponents\TabletComponent.cs(15,22): warning CS0414: The field 'TabletComponent.wasSwiped' is assigned but its value is never used
+38: Assets\Scripts\Creator\CreatorManager.cs(34,27): warning CS0414: The field 'CreatorManager.startBoardManager' is assigned but its value is never used
+39: Assets\Scripts\Tiles\Tile.cs(24,24): warning CS0414: The field 'Tile.colorUsesRemaining' is assigned but its value is never used
+40: Assets\Scripts\UI\OutlineButton.cs(18,18): warning CS0414: The field 'OutlineButton.shouldUpdate' is assigned but its value is never used
+41: Assets\Scripts\Parsing\ParseState.cs(21,29): warning CS0414: The field 'ParseState.delete' is assigned but its value is never used
+
+- Errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.25 sec
+
+- Output (0 lines):
+
+- Errors (0 lines):
+
+********************************************************************************
+*                   Wednesday, November 27, 2019 8:16:18 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.4.228
+Unity version: 2017.4.30f1
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: E:\Game Dev C\Tiles
+Target profile directory: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5
+Unity Mono executable: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.7.0.62620)
+
+- Compilation ------------------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-c2c89132ccfd7e645af74074b103c952
+Exit code: 0
+Elapsed time: 4.21 sec
+
+- Output (42 lines):
+0: Assets\Scripts\Boards\PlayerBoard.cs(14,17): warning CS0108: 'PlayerBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+1: Assets\Scripts\Boards\TargetBoard.cs(5,17): warning CS0108: 'TargetBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+2: Assets\Scripts\Parsing\ParseManager.cs(145,21): warning CS0219: The variable 'charsRemaining' is assigned but its value is never used
+3: Assets\Scripts\Parsing\ParseManager.cs(309,18): warning CS0219: The variable 'c' is assigned but its value is never used
+4: Assets\Scripts\Helpers\TileSprites.cs(9,21): warning CS0649: Field 'TileSprites.rook' is never assigned to, and will always have its default value null
+5: Assets\Scripts\Helpers\TileSprites.cs(11,21): warning CS0649: Field 'TileSprites.bishop' is never assigned to, and will always have its default value null
+6: Assets\Scripts\Helpers\TileSprites.cs(10,21): warning CS0649: Field 'TileSprites.knight' is never assigned to, and will always have its default value null
+7: Assets\Scripts\Helpers\TileSprites.cs(23,21): warning CS0649: Field 'TileSprites.battery4' is never assigned to, and will always have its default value null
+8: Assets\Scripts\Creator\ParameterGetter.cs(12,60): warning CS0649: Field 'ParameterGetter.steelButton' is never assigned to, and will always have its default value null
+9: Assets\Scripts\Creator\ParameterGetter.cs(11,54): warning CS0649: Field 'ParameterGetter.steelCount' is never assigned to, and will always have its default value null
+10: Assets\Scripts\Helpers\TileSprites.cs(12,21): warning CS0649: Field 'TileSprites.king' is never assigned to, and will always have its default value null
+11: Assets\Scripts\Helpers\TileSprites.cs(24,21): warning CS0649: Field 'TileSprites.battery5' is never assigned to, and will always have its default value null
+12: Assets\Scripts\Managers\LevelManager.cs(9,18): warning CS0649: Field 'LevelManager.levelText' is never assigned to, and will always have its default value null
+13: Assets\Scripts\UI\LevelSelector.cs(11,41): warning CS0649: Field 'LevelSelector._selector' is never assigned to, and will always have its default value null
+14: Assets\Scripts\Creator\ParameterGetter.cs(11,66): warning CS0649: Field 'ParameterGetter.amethystCount' is never assigned to, and will always have its default value null
+15: Assets\Scripts\Managers\SwipeManager.cs(14,70): warning CS0067: The event 'SwipeManager.swag' is never used
+16: Assets\Scripts\Helpers\TileSprites.cs(16,21): warning CS0649: Field 'TileSprites.hybrid' is never assigned to, and will always have its default value null
+17: Assets\Scripts\UI\InGameUI.cs(10,35): warning CS0649: Field 'InGameUI._limiterText' is never assigned to, and will always have its default value null
+18: Assets\Scripts\Creator\ParameterGetter.cs(11,43): warning CS0649: Field 'ParameterGetter.ironCount' is never assigned to, and will always have its default value null
+19: Assets\Scripts\Creator\ParameterGetter.cs(12,35): warning CS0649: Field 'ParameterGetter.brickButton' is never assigned to, and will always have its default value null
+20: Assets\Scripts\Creator\ParameterGetter.cs(12,73): warning CS0649: Field 'ParameterGetter.amethystButton' is never assigned to, and will always have its default value null
+21: Assets\Scripts\Creator\CreatorManager.cs(33,26): warning CS0649: Field 'CreatorManager.SeedText' is never assigned to, and will always have its default value null
+22: Assets\Scripts\Helpers\TileSprites.cs(20,21): warning CS0649: Field 'TileSprites.battery1' is never assigned to, and will always have its default value null
+23: Assets\Scripts\Helpers\TileSprites.cs(13,21): warning CS0649: Field 'TileSprites.queen' is never assigned to, and will always have its default value null
+24: Assets\Scripts\Creator\ParameterGetter.cs(11,31): warning CS0649: Field 'ParameterGetter.brickCount' is never assigned to, and will always have its default value null
+25: Assets\Scripts\Helpers\TileSprites.cs(8,21): warning CS0649: Field 'TileSprites.pawn' is never assigned to, and will always have its default value null
+26: Assets\Scripts\UI\InGameMenu.cs(10,41): warning CS0649: Field 'InGameMenu.menuPanel' is never assigned to, and will always have its default value null
+27: Assets\Scripts\Helpers\TileSprites.cs(22,21): warning CS0649: Field 'TileSprites.battery3' is never assigned to, and will always have its default value null
+28: Assets\Scripts\Creator\ParameterGetter.cs(12,48): warning CS0649: Field 'ParameterGetter.ironButton' is never assigned to, and will always have its default value null
+29: Assets\Scripts\Tiles\PlayerTile.cs(31,38): warning CS0649: Field 'PlayerTile.nextMode' is never assigned to, and will always have its default value
+30: Assets\Scripts\Helpers\TileSprites.cs(21,21): warning CS0649: Field 'TileSprites.battery2' is never assigned to, and will always have its default value null
+31: Assets\Scripts\Helpers\TileSprites.cs(17,21): warning CS0649: Field 'TileSprites.normal' is never assigned to, and will always have its default value null
+32: Assets\Scripts\UI\PageTab.cs(30,28): warning CS0649: Field 'PageTab.selectedColor' is never assigned to, and will always have its default value
+33: Assets\Scripts\UI\InGameMenu.cs(11,41): warning CS0649: Field 'InGameMenu.exitPanel' is never assigned to, and will always have its default value null
+34: Assets\Scripts\Creator\CreatorManager.cs(31,26): warning CS0649: Field 'CreatorManager.valueBoxes' is never assigned to, and will always have its default value null
+35: Assets\Scripts\UI\PageTab.cs(28,28): warning CS0649: Field 'PageTab.image' is never assigned to, and will always have its default value null
+36: Assets\Scripts\Creator\CreatorManager.cs(29,26): warning CS0649: Field 'CreatorManager.TileImages' is never assigned to, and will always have its default value null
+37: Assets\Scripts\Tiles\Tile.cs(24,24): warning CS0414: The field 'Tile.colorUsesRemaining' is assigned but its value is never used
+38: Assets\Scripts\UI\OutlineButton.cs(18,18): warning CS0414: The field 'OutlineButton.shouldUpdate' is assigned but its value is never used
+39: Assets\Scripts\TileComponents\TabletComponent.cs(15,22): warning CS0414: The field 'TabletComponent.wasSwiped' is assigned but its value is never used
+40: Assets\Scripts\Creator\CreatorManager.cs(34,27): warning CS0414: The field 'CreatorManager.startBoardManager' is assigned but its value is never used
+41: Assets\Scripts\Parsing\ParseState.cs(21,29): warning CS0414: The field 'ParseState.delete' is assigned but its value is never used
+
+- Errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.23 sec
+
+- Output (0 lines):
+
+- Errors (0 lines):
+
+********************************************************************************
+*                   Wednesday, November 27, 2019 8:17:57 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.4.228
+Unity version: 2017.4.30f1
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: E:\Game Dev C\Tiles
+Target profile directory: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5
+Unity Mono executable: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.7.0.62620)
+
+- Compilation ------------------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-6722f41841ef6954e8dfca2badaaaf59
+Exit code: 0
+Elapsed time: 4.24 sec
+
+- Output (42 lines):
+0: Assets\Scripts\Boards\PlayerBoard.cs(14,17): warning CS0108: 'PlayerBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+1: Assets\Scripts\Boards\TargetBoard.cs(5,17): warning CS0108: 'TargetBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+2: Assets\Scripts\Parsing\ParseManager.cs(145,21): warning CS0219: The variable 'charsRemaining' is assigned but its value is never used
+3: Assets\Scripts\Parsing\ParseManager.cs(309,18): warning CS0219: The variable 'c' is assigned but its value is never used
+4: Assets\Scripts\Creator\CreatorManager.cs(33,26): warning CS0649: Field 'CreatorManager.SeedText' is never assigned to, and will always have its default value null
+5: Assets\Scripts\UI\PageTab.cs(30,28): warning CS0649: Field 'PageTab.selectedColor' is never assigned to, and will always have its default value
+6: Assets\Scripts\UI\PageTab.cs(28,28): warning CS0649: Field 'PageTab.image' is never assigned to, and will always have its default value null
+7: Assets\Scripts\Helpers\TileSprites.cs(10,21): warning CS0649: Field 'TileSprites.knight' is never assigned to, and will always have its default value null
+8: Assets\Scripts\Helpers\TileSprites.cs(24,21): warning CS0649: Field 'TileSprites.battery5' is never assigned to, and will always have its default value null
+9: Assets\Scripts\Tiles\PlayerTile.cs(31,38): warning CS0649: Field 'PlayerTile.nextMode' is never assigned to, and will always have its default value
+10: Assets\Scripts\Helpers\TileSprites.cs(9,21): warning CS0649: Field 'TileSprites.rook' is never assigned to, and will always have its default value null
+11: Assets\Scripts\UI\InGameMenu.cs(10,41): warning CS0649: Field 'InGameMenu.menuPanel' is never assigned to, and will always have its default value null
+12: Assets\Scripts\Managers\LevelManager.cs(9,18): warning CS0649: Field 'LevelManager.levelText' is never assigned to, and will always have its default value null
+13: Assets\Scripts\Helpers\TileSprites.cs(8,21): warning CS0649: Field 'TileSprites.pawn' is never assigned to, and will always have its default value null
+14: Assets\Scripts\Helpers\TileSprites.cs(23,21): warning CS0649: Field 'TileSprites.battery4' is never assigned to, and will always have its default value null
+15: Assets\Scripts\UI\LevelSelector.cs(11,41): warning CS0649: Field 'LevelSelector._selector' is never assigned to, and will always have its default value null
+16: Assets\Scripts\Helpers\TileSprites.cs(22,21): warning CS0649: Field 'TileSprites.battery3' is never assigned to, and will always have its default value null
+17: Assets\Scripts\Creator\CreatorManager.cs(29,26): warning CS0649: Field 'CreatorManager.TileImages' is never assigned to, and will always have its default value null
+18: Assets\Scripts\Helpers\TileSprites.cs(16,21): warning CS0649: Field 'TileSprites.hybrid' is never assigned to, and will always have its default value null
+19: Assets\Scripts\UI\InGameMenu.cs(11,41): warning CS0649: Field 'InGameMenu.exitPanel' is never assigned to, and will always have its default value null
+20: Assets\Scripts\Helpers\TileSprites.cs(12,21): warning CS0649: Field 'TileSprites.king' is never assigned to, and will always have its default value null
+21: Assets\Scripts\Creator\ParameterGetter.cs(12,73): warning CS0649: Field 'ParameterGetter.amethystButton' is never assigned to, and will always have its default value null
+22: Assets\Scripts\Creator\ParameterGetter.cs(12,48): warning CS0649: Field 'ParameterGetter.ironButton' is never assigned to, and will always have its default value null
+23: Assets\Scripts\Creator\ParameterGetter.cs(11,31): warning CS0649: Field 'ParameterGetter.brickCount' is never assigned to, and will always have its default value null
+24: Assets\Scripts\Helpers\TileSprites.cs(13,21): warning CS0649: Field 'TileSprites.queen' is never assigned to, and will always have its default value null
+25: Assets\Scripts\Creator\CreatorManager.cs(31,26): warning CS0649: Field 'CreatorManager.valueBoxes' is never assigned to, and will always have its default value null
+26: Assets\Scripts\Creator\ParameterGetter.cs(12,35): warning CS0649: Field 'ParameterGetter.brickButton' is never assigned to, and will always have its default value null
+27: Assets\Scripts\Creator\ParameterGetter.cs(11,43): warning CS0649: Field 'ParameterGetter.ironCount' is never assigned to, and will always have its default value null
+28: Assets\Scripts\Helpers\TileSprites.cs(21,21): warning CS0649: Field 'TileSprites.battery2' is never assigned to, and will always have its default value null
+29: Assets\Scripts\Helpers\TileSprites.cs(17,21): warning CS0649: Field 'TileSprites.normal' is never assigned to, and will always have its default value null
+30: Assets\Scripts\Helpers\TileSprites.cs(20,21): warning CS0649: Field 'TileSprites.battery1' is never assigned to, and will always have its default value null
+31: Assets\Scripts\UI\InGameUI.cs(10,35): warning CS0649: Field 'InGameUI._limiterText' is never assigned to, and will always have its default value null
+32: Assets\Scripts\Creator\ParameterGetter.cs(12,60): warning CS0649: Field 'ParameterGetter.steelButton' is never assigned to, and will always have its default value null
+33: Assets\Scripts\Helpers\TileSprites.cs(11,21): warning CS0649: Field 'TileSprites.bishop' is never assigned to, and will always have its default value null
+34: Assets\Scripts\Creator\ParameterGetter.cs(11,66): warning CS0649: Field 'ParameterGetter.amethystCount' is never assigned to, and will always have its default value null
+35: Assets\Scripts\Managers\SwipeManager.cs(14,70): warning CS0067: The event 'SwipeManager.swag' is never used
+36: Assets\Scripts\Creator\ParameterGetter.cs(11,54): warning CS0649: Field 'ParameterGetter.steelCount' is never assigned to, and will always have its default value null
+37: Assets\Scripts\UI\OutlineButton.cs(18,18): warning CS0414: The field 'OutlineButton.shouldUpdate' is assigned but its value is never used
+38: Assets\Scripts\Parsing\ParseState.cs(21,29): warning CS0414: The field 'ParseState.delete' is assigned but its value is never used
+39: Assets\Scripts\Tiles\Tile.cs(24,24): warning CS0414: The field 'Tile.colorUsesRemaining' is assigned but its value is never used
+40: Assets\Scripts\Creator\CreatorManager.cs(34,27): warning CS0414: The field 'CreatorManager.startBoardManager' is assigned but its value is never used
+41: Assets\Scripts\TileComponents\TabletComponent.cs(15,22): warning CS0414: The field 'TabletComponent.wasSwiped' is assigned but its value is never used
+
+- Errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.23 sec
+
+- Output (0 lines):
+
+- Errors (0 lines):
+
+********************************************************************************
+*                   Wednesday, November 27, 2019 8:18:31 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.4.228
+Unity version: 2017.4.30f1
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: E:\Game Dev C\Tiles
+Target profile directory: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5
+Unity Mono executable: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.7.0.62620)
+
+- Compilation ------------------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-d008a711e855ac04389987bce13faf24
+Exit code: 0
+Elapsed time: 4.17 sec
+
+- Output (42 lines):
+0: Assets\Scripts\Boards\PlayerBoard.cs(14,17): warning CS0108: 'PlayerBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+1: Assets\Scripts\Boards\TargetBoard.cs(5,17): warning CS0108: 'TargetBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+2: Assets\Scripts\Parsing\ParseManager.cs(145,21): warning CS0219: The variable 'charsRemaining' is assigned but its value is never used
+3: Assets\Scripts\Parsing\ParseManager.cs(309,18): warning CS0219: The variable 'c' is assigned but its value is never used
+4: Assets\Scripts\Helpers\TileSprites.cs(9,21): warning CS0649: Field 'TileSprites.rook' is never assigned to, and will always have its default value null
+5: Assets\Scripts\Helpers\TileSprites.cs(10,21): warning CS0649: Field 'TileSprites.knight' is never assigned to, and will always have its default value null
+6: Assets\Scripts\UI\InGameMenu.cs(10,41): warning CS0649: Field 'InGameMenu.menuPanel' is never assigned to, and will always have its default value null
+7: Assets\Scripts\Creator\CreatorManager.cs(33,26): warning CS0649: Field 'CreatorManager.SeedText' is never assigned to, and will always have its default value null
+8: Assets\Scripts\Creator\ParameterGetter.cs(12,60): warning CS0649: Field 'ParameterGetter.steelButton' is never assigned to, and will always have its default value null
+9: Assets\Scripts\Creator\CreatorManager.cs(31,26): warning CS0649: Field 'CreatorManager.valueBoxes' is never assigned to, and will always have its default value null
+10: Assets\Scripts\Helpers\TileSprites.cs(12,21): warning CS0649: Field 'TileSprites.king' is never assigned to, and will always have its default value null
+11: Assets\Scripts\Helpers\TileSprites.cs(20,21): warning CS0649: Field 'TileSprites.battery1' is never assigned to, and will always have its default value null
+12: Assets\Scripts\Helpers\TileSprites.cs(21,21): warning CS0649: Field 'TileSprites.battery2' is never assigned to, and will always have its default value null
+13: Assets\Scripts\Managers\LevelManager.cs(9,18): warning CS0649: Field 'LevelManager.levelText' is never assigned to, and will always have its default value null
+14: Assets\Scripts\Helpers\TileSprites.cs(11,21): warning CS0649: Field 'TileSprites.bishop' is never assigned to, and will always have its default value null
+15: Assets\Scripts\Creator\ParameterGetter.cs(11,54): warning CS0649: Field 'ParameterGetter.steelCount' is never assigned to, and will always have its default value null
+16: Assets\Scripts\Helpers\TileSprites.cs(17,21): warning CS0649: Field 'TileSprites.normal' is never assigned to, and will always have its default value null
+17: Assets\Scripts\UI\LevelSelector.cs(11,41): warning CS0649: Field 'LevelSelector._selector' is never assigned to, and will always have its default value null
+18: Assets\Scripts\Helpers\TileSprites.cs(16,21): warning CS0649: Field 'TileSprites.hybrid' is never assigned to, and will always have its default value null
+19: Assets\Scripts\Helpers\TileSprites.cs(22,21): warning CS0649: Field 'TileSprites.battery3' is never assigned to, and will always have its default value null
+20: Assets\Scripts\Managers\SwipeManager.cs(14,70): warning CS0067: The event 'SwipeManager.swag' is never used
+21: Assets\Scripts\Tiles\PlayerTile.cs(31,38): warning CS0649: Field 'PlayerTile.nextMode' is never assigned to, and will always have its default value
+22: Assets\Scripts\Creator\ParameterGetter.cs(11,66): warning CS0649: Field 'ParameterGetter.amethystCount' is never assigned to, and will always have its default value null
+23: Assets\Scripts\Creator\ParameterGetter.cs(11,43): warning CS0649: Field 'ParameterGetter.ironCount' is never assigned to, and will always have its default value null
+24: Assets\Scripts\Helpers\TileSprites.cs(8,21): warning CS0649: Field 'TileSprites.pawn' is never assigned to, and will always have its default value null
+25: Assets\Scripts\Helpers\TileSprites.cs(24,21): warning CS0649: Field 'TileSprites.battery5' is never assigned to, and will always have its default value null
+26: Assets\Scripts\Helpers\TileSprites.cs(13,21): warning CS0649: Field 'TileSprites.queen' is never assigned to, and will always have its default value null
+27: Assets\Scripts\Helpers\TileSprites.cs(23,21): warning CS0649: Field 'TileSprites.battery4' is never assigned to, and will always have its default value null
+28: Assets\Scripts\Creator\ParameterGetter.cs(12,35): warning CS0649: Field 'ParameterGetter.brickButton' is never assigned to, and will always have its default value null
+29: Assets\Scripts\Creator\ParameterGetter.cs(11,31): warning CS0649: Field 'ParameterGetter.brickCount' is never assigned to, and will always have its default value null
+30: Assets\Scripts\UI\PageTab.cs(30,28): warning CS0649: Field 'PageTab.selectedColor' is never assigned to, and will always have its default value
+31: Assets\Scripts\Creator\ParameterGetter.cs(12,48): warning CS0649: Field 'ParameterGetter.ironButton' is never assigned to, and will always have its default value null
+32: Assets\Scripts\UI\PageTab.cs(28,28): warning CS0649: Field 'PageTab.image' is never assigned to, and will always have its default value null
+33: Assets\Scripts\UI\InGameMenu.cs(11,41): warning CS0649: Field 'InGameMenu.exitPanel' is never assigned to, and will always have its default value null
+34: Assets\Scripts\UI\InGameUI.cs(10,35): warning CS0649: Field 'InGameUI._limiterText' is never assigned to, and will always have its default value null
+35: Assets\Scripts\Creator\CreatorManager.cs(29,26): warning CS0649: Field 'CreatorManager.TileImages' is never assigned to, and will always have its default value null
+36: Assets\Scripts\Creator\ParameterGetter.cs(12,73): warning CS0649: Field 'ParameterGetter.amethystButton' is never assigned to, and will always have its default value null
+37: Assets\Scripts\TileComponents\TabletComponent.cs(15,22): warning CS0414: The field 'TabletComponent.wasSwiped' is assigned but its value is never used
+38: Assets\Scripts\UI\OutlineButton.cs(18,18): warning CS0414: The field 'OutlineButton.shouldUpdate' is assigned but its value is never used
+39: Assets\Scripts\Tiles\Tile.cs(24,24): warning CS0414: The field 'Tile.colorUsesRemaining' is assigned but its value is never used
+40: Assets\Scripts\Creator\CreatorManager.cs(34,27): warning CS0414: The field 'CreatorManager.startBoardManager' is assigned but its value is never used
+41: Assets\Scripts\Parsing\ParseState.cs(21,29): warning CS0414: The field 'ParseState.delete' is assigned but its value is never used
+
+- Errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.24 sec
+
+- Output (0 lines):
+
+- Errors (0 lines):
+
+********************************************************************************
+*                   Wednesday, November 27, 2019 8:19:17 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.4.228
+Unity version: 2017.4.30f1
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: E:\Game Dev C\Tiles
+Target profile directory: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5
+Unity Mono executable: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.7.0.62620)
+
+- Compilation ------------------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-9c947e71a848b2a49b6222da49291ee5
+Exit code: 0
+Elapsed time: 4.21 sec
+
+- Output (42 lines):
+0: Assets\Scripts\Boards\PlayerBoard.cs(14,17): warning CS0108: 'PlayerBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+1: Assets\Scripts\Boards\TargetBoard.cs(5,17): warning CS0108: 'TargetBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+2: Assets\Scripts\Parsing\ParseManager.cs(145,21): warning CS0219: The variable 'charsRemaining' is assigned but its value is never used
+3: Assets\Scripts\Parsing\ParseManager.cs(309,18): warning CS0219: The variable 'c' is assigned but its value is never used
+4: Assets\Scripts\Helpers\TileSprites.cs(8,21): warning CS0649: Field 'TileSprites.pawn' is never assigned to, and will always have its default value null
+5: Assets\Scripts\UI\InGameMenu.cs(11,41): warning CS0649: Field 'InGameMenu.exitPanel' is never assigned to, and will always have its default value null
+6: Assets\Scripts\Creator\ParameterGetter.cs(11,31): warning CS0649: Field 'ParameterGetter.brickCount' is never assigned to, and will always have its default value null
+7: Assets\Scripts\Creator\CreatorManager.cs(33,26): warning CS0649: Field 'CreatorManager.SeedText' is never assigned to, and will always have its default value null
+8: Assets\Scripts\Creator\ParameterGetter.cs(12,60): warning CS0649: Field 'ParameterGetter.steelButton' is never assigned to, and will always have its default value null
+9: Assets\Scripts\Helpers\TileSprites.cs(13,21): warning CS0649: Field 'TileSprites.queen' is never assigned to, and will always have its default value null
+10: Assets\Scripts\UI\InGameUI.cs(10,35): warning CS0649: Field 'InGameUI._limiterText' is never assigned to, and will always have its default value null
+11: Assets\Scripts\Creator\ParameterGetter.cs(12,48): warning CS0649: Field 'ParameterGetter.ironButton' is never assigned to, and will always have its default value null
+12: Assets\Scripts\Managers\LevelManager.cs(9,18): warning CS0649: Field 'LevelManager.levelText' is never assigned to, and will always have its default value null
+13: Assets\Scripts\Creator\CreatorManager.cs(31,26): warning CS0649: Field 'CreatorManager.valueBoxes' is never assigned to, and will always have its default value null
+14: Assets\Scripts\Managers\SwipeManager.cs(14,70): warning CS0067: The event 'SwipeManager.swag' is never used
+15: Assets\Scripts\UI\LevelSelector.cs(11,41): warning CS0649: Field 'LevelSelector._selector' is never assigned to, and will always have its default value null
+16: Assets\Scripts\Helpers\TileSprites.cs(20,21): warning CS0649: Field 'TileSprites.battery1' is never assigned to, and will always have its default value null
+17: Assets\Scripts\Helpers\TileSprites.cs(16,21): warning CS0649: Field 'TileSprites.hybrid' is never assigned to, and will always have its default value null
+18: Assets\Scripts\Creator\CreatorManager.cs(29,26): warning CS0649: Field 'CreatorManager.TileImages' is never assigned to, and will always have its default value null
+19: Assets\Scripts\Creator\ParameterGetter.cs(12,73): warning CS0649: Field 'ParameterGetter.amethystButton' is never assigned to, and will always have its default value null
+20: Assets\Scripts\Tiles\PlayerTile.cs(31,38): warning CS0649: Field 'PlayerTile.nextMode' is never assigned to, and will always have its default value
+21: Assets\Scripts\Creator\ParameterGetter.cs(11,54): warning CS0649: Field 'ParameterGetter.steelCount' is never assigned to, and will always have its default value null
+22: Assets\Scripts\UI\InGameMenu.cs(10,41): warning CS0649: Field 'InGameMenu.menuPanel' is never assigned to, and will always have its default value null
+23: Assets\Scripts\Helpers\TileSprites.cs(23,21): warning CS0649: Field 'TileSprites.battery4' is never assigned to, and will always have its default value null
+24: Assets\Scripts\Helpers\TileSprites.cs(17,21): warning CS0649: Field 'TileSprites.normal' is never assigned to, and will always have its default value null
+25: Assets\Scripts\Helpers\TileSprites.cs(12,21): warning CS0649: Field 'TileSprites.king' is never assigned to, and will always have its default value null
+26: Assets\Scripts\Helpers\TileSprites.cs(9,21): warning CS0649: Field 'TileSprites.rook' is never assigned to, and will always have its default value null
+27: Assets\Scripts\Creator\ParameterGetter.cs(12,35): warning CS0649: Field 'ParameterGetter.brickButton' is never assigned to, and will always have its default value null
+28: Assets\Scripts\Helpers\TileSprites.cs(21,21): warning CS0649: Field 'TileSprites.battery2' is never assigned to, and will always have its default value null
+29: Assets\Scripts\Helpers\TileSprites.cs(10,21): warning CS0649: Field 'TileSprites.knight' is never assigned to, and will always have its default value null
+30: Assets\Scripts\Creator\ParameterGetter.cs(11,66): warning CS0649: Field 'ParameterGetter.amethystCount' is never assigned to, and will always have its default value null
+31: Assets\Scripts\UI\PageTab.cs(28,28): warning CS0649: Field 'PageTab.image' is never assigned to, and will always have its default value null
+32: Assets\Scripts\Helpers\TileSprites.cs(24,21): warning CS0649: Field 'TileSprites.battery5' is never assigned to, and will always have its default value null
+33: Assets\Scripts\Helpers\TileSprites.cs(22,21): warning CS0649: Field 'TileSprites.battery3' is never assigned to, and will always have its default value null
+34: Assets\Scripts\Creator\ParameterGetter.cs(11,43): warning CS0649: Field 'ParameterGetter.ironCount' is never assigned to, and will always have its default value null
+35: Assets\Scripts\Helpers\TileSprites.cs(11,21): warning CS0649: Field 'TileSprites.bishop' is never assigned to, and will always have its default value null
+36: Assets\Scripts\UI\PageTab.cs(30,28): warning CS0649: Field 'PageTab.selectedColor' is never assigned to, and will always have its default value
+37: Assets\Scripts\Tiles\Tile.cs(24,24): warning CS0414: The field 'Tile.colorUsesRemaining' is assigned but its value is never used
+38: Assets\Scripts\UI\OutlineButton.cs(18,18): warning CS0414: The field 'OutlineButton.shouldUpdate' is assigned but its value is never used
+39: Assets\Scripts\Creator\CreatorManager.cs(34,27): warning CS0414: The field 'CreatorManager.startBoardManager' is assigned but its value is never used
+40: Assets\Scripts\Parsing\ParseState.cs(21,29): warning CS0414: The field 'ParseState.delete' is assigned but its value is never used
+41: Assets\Scripts\TileComponents\TabletComponent.cs(15,22): warning CS0414: The field 'TabletComponent.wasSwiped' is assigned but its value is never used
+
+- Errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.26 sec
+
+- Output (0 lines):
+
+- Errors (0 lines):
+
+********************************************************************************
+*                   Wednesday, November 27, 2019 8:20:22 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.4.228
+Unity version: 2017.4.30f1
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: E:\Game Dev C\Tiles
+Target profile directory: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5
+Unity Mono executable: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.7.0.62620)
+
+- Compilation ------------------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-de9664709619f0249a7f5584fc9e5e8c
+Exit code: 0
+Elapsed time: 4.33 sec
+
+- Output (42 lines):
+0: Assets\Scripts\Boards\PlayerBoard.cs(14,17): warning CS0108: 'PlayerBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+1: Assets\Scripts\Boards\TargetBoard.cs(5,17): warning CS0108: 'TargetBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+2: Assets\Scripts\Parsing\ParseManager.cs(145,21): warning CS0219: The variable 'charsRemaining' is assigned but its value is never used
+3: Assets\Scripts\Parsing\ParseManager.cs(309,18): warning CS0219: The variable 'c' is assigned but its value is never used
+4: Assets\Scripts\Creator\ParameterGetter.cs(11,54): warning CS0649: Field 'ParameterGetter.steelCount' is never assigned to, and will always have its default value null
+5: Assets\Scripts\Creator\ParameterGetter.cs(12,73): warning CS0649: Field 'ParameterGetter.amethystButton' is never assigned to, and will always have its default value null
+6: Assets\Scripts\Helpers\TileSprites.cs(16,21): warning CS0649: Field 'TileSprites.hybrid' is never assigned to, and will always have its default value null
+7: Assets\Scripts\Helpers\TileSprites.cs(13,21): warning CS0649: Field 'TileSprites.queen' is never assigned to, and will always have its default value null
+8: Assets\Scripts\Creator\ParameterGetter.cs(12,48): warning CS0649: Field 'ParameterGetter.ironButton' is never assigned to, and will always have its default value null
+9: Assets\Scripts\Helpers\TileSprites.cs(20,21): warning CS0649: Field 'TileSprites.battery1' is never assigned to, and will always have its default value null
+10: Assets\Scripts\Managers\SwipeManager.cs(14,70): warning CS0067: The event 'SwipeManager.swag' is never used
+11: Assets\Scripts\Creator\ParameterGetter.cs(12,60): warning CS0649: Field 'ParameterGetter.steelButton' is never assigned to, and will always have its default value null
+12: Assets\Scripts\Helpers\TileSprites.cs(12,21): warning CS0649: Field 'TileSprites.king' is never assigned to, and will always have its default value null
+13: Assets\Scripts\Creator\ParameterGetter.cs(11,66): warning CS0649: Field 'ParameterGetter.amethystCount' is never assigned to, and will always have its default value null
+14: Assets\Scripts\Creator\ParameterGetter.cs(12,35): warning CS0649: Field 'ParameterGetter.brickButton' is never assigned to, and will always have its default value null
+15: Assets\Scripts\Helpers\TileSprites.cs(22,21): warning CS0649: Field 'TileSprites.battery3' is never assigned to, and will always have its default value null
+16: Assets\Scripts\Helpers\TileSprites.cs(8,21): warning CS0649: Field 'TileSprites.pawn' is never assigned to, and will always have its default value null
+17: Assets\Scripts\Helpers\TileSprites.cs(24,21): warning CS0649: Field 'TileSprites.battery5' is never assigned to, and will always have its default value null
+18: Assets\Scripts\Creator\ParameterGetter.cs(11,31): warning CS0649: Field 'ParameterGetter.brickCount' is never assigned to, and will always have its default value null
+19: Assets\Scripts\UI\InGameUI.cs(10,35): warning CS0649: Field 'InGameUI._limiterText' is never assigned to, and will always have its default value null
+20: Assets\Scripts\Creator\ParameterGetter.cs(11,43): warning CS0649: Field 'ParameterGetter.ironCount' is never assigned to, and will always have its default value null
+21: Assets\Scripts\Creator\CreatorManager.cs(31,26): warning CS0649: Field 'CreatorManager.valueBoxes' is never assigned to, and will always have its default value null
+22: Assets\Scripts\Helpers\TileSprites.cs(11,21): warning CS0649: Field 'TileSprites.bishop' is never assigned to, and will always have its default value null
+23: Assets\Scripts\Managers\LevelManager.cs(9,18): warning CS0649: Field 'LevelManager.levelText' is never assigned to, and will always have its default value null
+24: Assets\Scripts\UI\InGameMenu.cs(11,41): warning CS0649: Field 'InGameMenu.exitPanel' is never assigned to, and will always have its default value null
+25: Assets\Scripts\UI\InGameMenu.cs(10,41): warning CS0649: Field 'InGameMenu.menuPanel' is never assigned to, and will always have its default value null
+26: Assets\Scripts\Helpers\TileSprites.cs(23,21): warning CS0649: Field 'TileSprites.battery4' is never assigned to, and will always have its default value null
+27: Assets\Scripts\Creator\CreatorManager.cs(29,26): warning CS0649: Field 'CreatorManager.TileImages' is never assigned to, and will always have its default value null
+28: Assets\Scripts\Helpers\TileSprites.cs(10,21): warning CS0649: Field 'TileSprites.knight' is never assigned to, and will always have its default value null
+29: Assets\Scripts\Helpers\TileSprites.cs(9,21): warning CS0649: Field 'TileSprites.rook' is never assigned to, and will always have its default value null
+30: Assets\Scripts\UI\LevelSelector.cs(11,41): warning CS0649: Field 'LevelSelector._selector' is never assigned to, and will always have its default value null
+31: Assets\Scripts\Helpers\TileSprites.cs(17,21): warning CS0649: Field 'TileSprites.normal' is never assigned to, and will always have its default value null
+32: Assets\Scripts\Creator\CreatorManager.cs(33,26): warning CS0649: Field 'CreatorManager.SeedText' is never assigned to, and will always have its default value null
+33: Assets\Scripts\Tiles\PlayerTile.cs(31,38): warning CS0649: Field 'PlayerTile.nextMode' is never assigned to, and will always have its default value
+34: Assets\Scripts\Helpers\TileSprites.cs(21,21): warning CS0649: Field 'TileSprites.battery2' is never assigned to, and will always have its default value null
+35: Assets\Scripts\UI\PageTab.cs(28,28): warning CS0649: Field 'PageTab.image' is never assigned to, and will always have its default value null
+36: Assets\Scripts\UI\PageTab.cs(30,28): warning CS0649: Field 'PageTab.selectedColor' is never assigned to, and will always have its default value
+37: Assets\Scripts\Tiles\Tile.cs(24,24): warning CS0414: The field 'Tile.colorUsesRemaining' is assigned but its value is never used
+38: Assets\Scripts\Parsing\ParseState.cs(21,29): warning CS0414: The field 'ParseState.delete' is assigned but its value is never used
+39: Assets\Scripts\Creator\CreatorManager.cs(34,27): warning CS0414: The field 'CreatorManager.startBoardManager' is assigned but its value is never used
+40: Assets\Scripts\TileComponents\TabletComponent.cs(15,22): warning CS0414: The field 'TabletComponent.wasSwiped' is assigned but its value is never used
+41: Assets\Scripts\UI\OutlineButton.cs(18,18): warning CS0414: The field 'OutlineButton.shouldUpdate' is assigned but its value is never used
+
+- Errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.23 sec
+
+- Output (0 lines):
+
+- Errors (0 lines):
+
+********************************************************************************
+*                   Wednesday, November 27, 2019 8:21:08 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.4.228
+Unity version: 2017.4.30f1
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: E:\Game Dev C\Tiles
+Target profile directory: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5
+Unity Mono executable: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.7.0.62620)
+
+- Compilation ------------------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-d78b65da534e60549a76855d90f7885a
+Exit code: 0
+Elapsed time: 4.26 sec
+
+- Output (42 lines):
+0: Assets\Scripts\Boards\PlayerBoard.cs(14,17): warning CS0108: 'PlayerBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+1: Assets\Scripts\Boards\TargetBoard.cs(5,17): warning CS0108: 'TargetBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+2: Assets\Scripts\Parsing\ParseManager.cs(145,21): warning CS0219: The variable 'charsRemaining' is assigned but its value is never used
+3: Assets\Scripts\Parsing\ParseManager.cs(309,18): warning CS0219: The variable 'c' is assigned but its value is never used
+4: Assets\Scripts\UI\PageTab.cs(28,28): warning CS0649: Field 'PageTab.image' is never assigned to, and will always have its default value null
+5: Assets\Scripts\UI\LevelSelector.cs(11,41): warning CS0649: Field 'LevelSelector._selector' is never assigned to, and will always have its default value null
+6: Assets\Scripts\Creator\ParameterGetter.cs(12,60): warning CS0649: Field 'ParameterGetter.steelButton' is never assigned to, and will always have its default value null
+7: Assets\Scripts\UI\InGameMenu.cs(11,41): warning CS0649: Field 'InGameMenu.exitPanel' is never assigned to, and will always have its default value null
+8: Assets\Scripts\Creator\ParameterGetter.cs(11,43): warning CS0649: Field 'ParameterGetter.ironCount' is never assigned to, and will always have its default value null
+9: Assets\Scripts\Managers\LevelManager.cs(9,18): warning CS0649: Field 'LevelManager.levelText' is never assigned to, and will always have its default value null
+10: Assets\Scripts\Helpers\TileSprites.cs(20,21): warning CS0649: Field 'TileSprites.battery1' is never assigned to, and will always have its default value null
+11: Assets\Scripts\UI\PageTab.cs(30,28): warning CS0649: Field 'PageTab.selectedColor' is never assigned to, and will always have its default value
+12: Assets\Scripts\Creator\CreatorManager.cs(33,26): warning CS0649: Field 'CreatorManager.SeedText' is never assigned to, and will always have its default value null
+13: Assets\Scripts\Creator\ParameterGetter.cs(12,73): warning CS0649: Field 'ParameterGetter.amethystButton' is never assigned to, and will always have its default value null
+14: Assets\Scripts\Creator\ParameterGetter.cs(12,48): warning CS0649: Field 'ParameterGetter.ironButton' is never assigned to, and will always have its default value null
+15: Assets\Scripts\Creator\ParameterGetter.cs(11,54): warning CS0649: Field 'ParameterGetter.steelCount' is never assigned to, and will always have its default value null
+16: Assets\Scripts\Creator\ParameterGetter.cs(11,66): warning CS0649: Field 'ParameterGetter.amethystCount' is never assigned to, and will always have its default value null
+17: Assets\Scripts\Helpers\TileSprites.cs(24,21): warning CS0649: Field 'TileSprites.battery5' is never assigned to, and will always have its default value null
+18: Assets\Scripts\Creator\CreatorManager.cs(29,26): warning CS0649: Field 'CreatorManager.TileImages' is never assigned to, and will always have its default value null
+19: Assets\Scripts\Managers\SwipeManager.cs(14,70): warning CS0067: The event 'SwipeManager.swag' is never used
+20: Assets\Scripts\Helpers\TileSprites.cs(21,21): warning CS0649: Field 'TileSprites.battery2' is never assigned to, and will always have its default value null
+21: Assets\Scripts\Helpers\TileSprites.cs(9,21): warning CS0649: Field 'TileSprites.rook' is never assigned to, and will always have its default value null
+22: Assets\Scripts\Helpers\TileSprites.cs(23,21): warning CS0649: Field 'TileSprites.battery4' is never assigned to, and will always have its default value null
+23: Assets\Scripts\Helpers\TileSprites.cs(17,21): warning CS0649: Field 'TileSprites.normal' is never assigned to, and will always have its default value null
+24: Assets\Scripts\Creator\CreatorManager.cs(31,26): warning CS0649: Field 'CreatorManager.valueBoxes' is never assigned to, and will always have its default value null
+25: Assets\Scripts\Helpers\TileSprites.cs(22,21): warning CS0649: Field 'TileSprites.battery3' is never assigned to, and will always have its default value null
+26: Assets\Scripts\Tiles\PlayerTile.cs(31,38): warning CS0649: Field 'PlayerTile.nextMode' is never assigned to, and will always have its default value
+27: Assets\Scripts\UI\InGameUI.cs(10,35): warning CS0649: Field 'InGameUI._limiterText' is never assigned to, and will always have its default value null
+28: Assets\Scripts\Helpers\TileSprites.cs(13,21): warning CS0649: Field 'TileSprites.queen' is never assigned to, and will always have its default value null
+29: Assets\Scripts\Helpers\TileSprites.cs(12,21): warning CS0649: Field 'TileSprites.king' is never assigned to, and will always have its default value null
+30: Assets\Scripts\UI\InGameMenu.cs(10,41): warning CS0649: Field 'InGameMenu.menuPanel' is never assigned to, and will always have its default value null
+31: Assets\Scripts\Helpers\TileSprites.cs(11,21): warning CS0649: Field 'TileSprites.bishop' is never assigned to, and will always have its default value null
+32: Assets\Scripts\Helpers\TileSprites.cs(8,21): warning CS0649: Field 'TileSprites.pawn' is never assigned to, and will always have its default value null
+33: Assets\Scripts\Creator\ParameterGetter.cs(12,35): warning CS0649: Field 'ParameterGetter.brickButton' is never assigned to, and will always have its default value null
+34: Assets\Scripts\Helpers\TileSprites.cs(16,21): warning CS0649: Field 'TileSprites.hybrid' is never assigned to, and will always have its default value null
+35: Assets\Scripts\Creator\ParameterGetter.cs(11,31): warning CS0649: Field 'ParameterGetter.brickCount' is never assigned to, and will always have its default value null
+36: Assets\Scripts\Helpers\TileSprites.cs(10,21): warning CS0649: Field 'TileSprites.knight' is never assigned to, and will always have its default value null
+37: Assets\Scripts\Tiles\Tile.cs(24,24): warning CS0414: The field 'Tile.colorUsesRemaining' is assigned but its value is never used
+38: Assets\Scripts\TileComponents\TabletComponent.cs(15,22): warning CS0414: The field 'TabletComponent.wasSwiped' is assigned but its value is never used
+39: Assets\Scripts\Creator\CreatorManager.cs(34,27): warning CS0414: The field 'CreatorManager.startBoardManager' is assigned but its value is never used
+40: Assets\Scripts\UI\OutlineButton.cs(18,18): warning CS0414: The field 'OutlineButton.shouldUpdate' is assigned but its value is never used
+41: Assets\Scripts\Parsing\ParseState.cs(21,29): warning CS0414: The field 'ParseState.delete' is assigned but its value is never used
+
+- Errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.23 sec
+
+- Output (0 lines):
+
+- Errors (0 lines):
+
+********************************************************************************
+*                   Wednesday, November 27, 2019 8:21:56 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.4.228
+Unity version: 2017.4.30f1
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: E:\Game Dev C\Tiles
+Target profile directory: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5
+Unity Mono executable: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.7.0.62620)
+
+- Compilation ------------------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-167d6ca20910b4f4eac392ba0263ec2c
+Exit code: 0
+Elapsed time: 4.13 sec
+
+- Output (42 lines):
+0: Assets\Scripts\Boards\PlayerBoard.cs(14,17): warning CS0108: 'PlayerBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+1: Assets\Scripts\Boards\TargetBoard.cs(5,17): warning CS0108: 'TargetBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+2: Assets\Scripts\Parsing\ParseManager.cs(145,21): warning CS0219: The variable 'charsRemaining' is assigned but its value is never used
+3: Assets\Scripts\Parsing\ParseManager.cs(309,18): warning CS0219: The variable 'c' is assigned but its value is never used
+4: Assets\Scripts\UI\PageTab.cs(30,28): warning CS0649: Field 'PageTab.selectedColor' is never assigned to, and will always have its default value
+5: Assets\Scripts\UI\InGameUI.cs(10,35): warning CS0649: Field 'InGameUI._limiterText' is never assigned to, and will always have its default value null
+6: Assets\Scripts\UI\InGameMenu.cs(10,41): warning CS0649: Field 'InGameMenu.menuPanel' is never assigned to, and will always have its default value null
+7: Assets\Scripts\Managers\LevelManager.cs(9,18): warning CS0649: Field 'LevelManager.levelText' is never assigned to, and will always have its default value null
+8: Assets\Scripts\Helpers\TileSprites.cs(22,21): warning CS0649: Field 'TileSprites.battery3' is never assigned to, and will always have its default value null
+9: Assets\Scripts\Creator\CreatorManager.cs(31,26): warning CS0649: Field 'CreatorManager.valueBoxes' is never assigned to, and will always have its default value null
+10: Assets\Scripts\Creator\ParameterGetter.cs(12,73): warning CS0649: Field 'ParameterGetter.amethystButton' is never assigned to, and will always have its default value null
+11: Assets\Scripts\Helpers\TileSprites.cs(9,21): warning CS0649: Field 'TileSprites.rook' is never assigned to, and will always have its default value null
+12: Assets\Scripts\Creator\CreatorManager.cs(29,26): warning CS0649: Field 'CreatorManager.TileImages' is never assigned to, and will always have its default value null
+13: Assets\Scripts\Creator\ParameterGetter.cs(11,66): warning CS0649: Field 'ParameterGetter.amethystCount' is never assigned to, and will always have its default value null
+14: Assets\Scripts\Creator\ParameterGetter.cs(12,48): warning CS0649: Field 'ParameterGetter.ironButton' is never assigned to, and will always have its default value null
+15: Assets\Scripts\Helpers\TileSprites.cs(12,21): warning CS0649: Field 'TileSprites.king' is never assigned to, and will always have its default value null
+16: Assets\Scripts\Helpers\TileSprites.cs(13,21): warning CS0649: Field 'TileSprites.queen' is never assigned to, and will always have its default value null
+17: Assets\Scripts\Helpers\TileSprites.cs(8,21): warning CS0649: Field 'TileSprites.pawn' is never assigned to, and will always have its default value null
+18: Assets\Scripts\Helpers\TileSprites.cs(11,21): warning CS0649: Field 'TileSprites.bishop' is never assigned to, and will always have its default value null
+19: Assets\Scripts\Helpers\TileSprites.cs(24,21): warning CS0649: Field 'TileSprites.battery5' is never assigned to, and will always have its default value null
+20: Assets\Scripts\Creator\ParameterGetter.cs(12,35): warning CS0649: Field 'ParameterGetter.brickButton' is never assigned to, and will always have its default value null
+21: Assets\Scripts\UI\InGameMenu.cs(11,41): warning CS0649: Field 'InGameMenu.exitPanel' is never assigned to, and will always have its default value null
+22: Assets\Scripts\Helpers\TileSprites.cs(17,21): warning CS0649: Field 'TileSprites.normal' is never assigned to, and will always have its default value null
+23: Assets\Scripts\Helpers\TileSprites.cs(20,21): warning CS0649: Field 'TileSprites.battery1' is never assigned to, and will always have its default value null
+24: Assets\Scripts\Managers\SwipeManager.cs(14,70): warning CS0067: The event 'SwipeManager.swag' is never used
+25: Assets\Scripts\UI\PageTab.cs(28,28): warning CS0649: Field 'PageTab.image' is never assigned to, and will always have its default value null
+26: Assets\Scripts\Creator\ParameterGetter.cs(11,31): warning CS0649: Field 'ParameterGetter.brickCount' is never assigned to, and will always have its default value null
+27: Assets\Scripts\Creator\CreatorManager.cs(33,26): warning CS0649: Field 'CreatorManager.SeedText' is never assigned to, and will always have its default value null
+28: Assets\Scripts\UI\LevelSelector.cs(11,41): warning CS0649: Field 'LevelSelector._selector' is never assigned to, and will always have its default value null
+29: Assets\Scripts\Creator\ParameterGetter.cs(11,43): warning CS0649: Field 'ParameterGetter.ironCount' is never assigned to, and will always have its default value null
+30: Assets\Scripts\Helpers\TileSprites.cs(10,21): warning CS0649: Field 'TileSprites.knight' is never assigned to, and will always have its default value null
+31: Assets\Scripts\Creator\ParameterGetter.cs(12,60): warning CS0649: Field 'ParameterGetter.steelButton' is never assigned to, and will always have its default value null
+32: Assets\Scripts\Tiles\PlayerTile.cs(31,38): warning CS0649: Field 'PlayerTile.nextMode' is never assigned to, and will always have its default value
+33: Assets\Scripts\Helpers\TileSprites.cs(23,21): warning CS0649: Field 'TileSprites.battery4' is never assigned to, and will always have its default value null
+34: Assets\Scripts\Creator\ParameterGetter.cs(11,54): warning CS0649: Field 'ParameterGetter.steelCount' is never assigned to, and will always have its default value null
+35: Assets\Scripts\Helpers\TileSprites.cs(16,21): warning CS0649: Field 'TileSprites.hybrid' is never assigned to, and will always have its default value null
+36: Assets\Scripts\Helpers\TileSprites.cs(21,21): warning CS0649: Field 'TileSprites.battery2' is never assigned to, and will always have its default value null
+37: Assets\Scripts\UI\OutlineButton.cs(18,18): warning CS0414: The field 'OutlineButton.shouldUpdate' is assigned but its value is never used
+38: Assets\Scripts\Creator\CreatorManager.cs(34,27): warning CS0414: The field 'CreatorManager.startBoardManager' is assigned but its value is never used
+39: Assets\Scripts\Parsing\ParseState.cs(21,29): warning CS0414: The field 'ParseState.delete' is assigned but its value is never used
+40: Assets\Scripts\TileComponents\TabletComponent.cs(15,22): warning CS0414: The field 'TabletComponent.wasSwiped' is assigned but its value is never used
+41: Assets\Scripts\Tiles\Tile.cs(24,24): warning CS0414: The field 'Tile.colorUsesRemaining' is assigned but its value is never used
+
+- Errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.22 sec
+
+- Output (0 lines):
+
+- Errors (0 lines):
+
+********************************************************************************
+*                   Wednesday, November 27, 2019 8:24:36 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.4.228
+Unity version: 2017.4.30f1
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: E:\Game Dev C\Tiles
+Target profile directory: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5
+Unity Mono executable: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.7.0.62620)
+
+- Compilation ------------------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-07610a4cc368f5a409ef1c957e659e2b
+Exit code: 0
+Elapsed time: 4.18 sec
+
+- Output (42 lines):
+0: Assets\Scripts\Boards\PlayerBoard.cs(14,17): warning CS0108: 'PlayerBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+1: Assets\Scripts\Boards\TargetBoard.cs(5,17): warning CS0108: 'TargetBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+2: Assets\Scripts\Parsing\ParseManager.cs(145,21): warning CS0219: The variable 'charsRemaining' is assigned but its value is never used
+3: Assets\Scripts\Parsing\ParseManager.cs(309,18): warning CS0219: The variable 'c' is assigned but its value is never used
+4: Assets\Scripts\Helpers\TileSprites.cs(13,21): warning CS0649: Field 'TileSprites.queen' is never assigned to, and will always have its default value null
+5: Assets\Scripts\UI\PageTab.cs(28,28): warning CS0649: Field 'PageTab.image' is never assigned to, and will always have its default value null
+6: Assets\Scripts\Creator\ParameterGetter.cs(12,73): warning CS0649: Field 'ParameterGetter.amethystButton' is never assigned to, and will always have its default value null
+7: Assets\Scripts\Tiles\PlayerTile.cs(31,38): warning CS0649: Field 'PlayerTile.nextMode' is never assigned to, and will always have its default value
+8: Assets\Scripts\UI\LevelSelector.cs(11,41): warning CS0649: Field 'LevelSelector._selector' is never assigned to, and will always have its default value null
+9: Assets\Scripts\Helpers\TileSprites.cs(11,21): warning CS0649: Field 'TileSprites.bishop' is never assigned to, and will always have its default value null
+10: Assets\Scripts\Helpers\TileSprites.cs(17,21): warning CS0649: Field 'TileSprites.normal' is never assigned to, and will always have its default value null
+11: Assets\Scripts\Helpers\TileSprites.cs(8,21): warning CS0649: Field 'TileSprites.pawn' is never assigned to, and will always have its default value null
+12: Assets\Scripts\Managers\SwipeManager.cs(14,70): warning CS0067: The event 'SwipeManager.swag' is never used
+13: Assets\Scripts\Helpers\TileSprites.cs(23,21): warning CS0649: Field 'TileSprites.battery4' is never assigned to, and will always have its default value null
+14: Assets\Scripts\Helpers\TileSprites.cs(22,21): warning CS0649: Field 'TileSprites.battery3' is never assigned to, and will always have its default value null
+15: Assets\Scripts\Creator\CreatorManager.cs(29,26): warning CS0649: Field 'CreatorManager.TileImages' is never assigned to, and will always have its default value null
+16: Assets\Scripts\UI\InGameUI.cs(10,35): warning CS0649: Field 'InGameUI._limiterText' is never assigned to, and will always have its default value null
+17: Assets\Scripts\Creator\ParameterGetter.cs(11,66): warning CS0649: Field 'ParameterGetter.amethystCount' is never assigned to, and will always have its default value null
+18: Assets\Scripts\Creator\CreatorManager.cs(33,26): warning CS0649: Field 'CreatorManager.SeedText' is never assigned to, and will always have its default value null
+19: Assets\Scripts\Helpers\TileSprites.cs(16,21): warning CS0649: Field 'TileSprites.hybrid' is never assigned to, and will always have its default value null
+20: Assets\Scripts\Helpers\TileSprites.cs(24,21): warning CS0649: Field 'TileSprites.battery5' is never assigned to, and will always have its default value null
+21: Assets\Scripts\Helpers\TileSprites.cs(12,21): warning CS0649: Field 'TileSprites.king' is never assigned to, and will always have its default value null
+22: Assets\Scripts\Creator\ParameterGetter.cs(12,60): warning CS0649: Field 'ParameterGetter.steelButton' is never assigned to, and will always have its default value null
+23: Assets\Scripts\Helpers\TileSprites.cs(21,21): warning CS0649: Field 'TileSprites.battery2' is never assigned to, and will always have its default value null
+24: Assets\Scripts\Helpers\TileSprites.cs(10,21): warning CS0649: Field 'TileSprites.knight' is never assigned to, and will always have its default value null
+25: Assets\Scripts\UI\InGameMenu.cs(10,41): warning CS0649: Field 'InGameMenu.menuPanel' is never assigned to, and will always have its default value null
+26: Assets\Scripts\Creator\ParameterGetter.cs(11,43): warning CS0649: Field 'ParameterGetter.ironCount' is never assigned to, and will always have its default value null
+27: Assets\Scripts\Helpers\TileSprites.cs(9,21): warning CS0649: Field 'TileSprites.rook' is never assigned to, and will always have its default value null
+28: Assets\Scripts\Creator\ParameterGetter.cs(12,48): warning CS0649: Field 'ParameterGetter.ironButton' is never assigned to, and will always have its default value null
+29: Assets\Scripts\UI\PageTab.cs(30,28): warning CS0649: Field 'PageTab.selectedColor' is never assigned to, and will always have its default value
+30: Assets\Scripts\Helpers\TileSprites.cs(20,21): warning CS0649: Field 'TileSprites.battery1' is never assigned to, and will always have its default value null
+31: Assets\Scripts\Managers\LevelManager.cs(9,18): warning CS0649: Field 'LevelManager.levelText' is never assigned to, and will always have its default value null
+32: Assets\Scripts\Creator\CreatorManager.cs(31,26): warning CS0649: Field 'CreatorManager.valueBoxes' is never assigned to, and will always have its default value null
+33: Assets\Scripts\Creator\ParameterGetter.cs(12,35): warning CS0649: Field 'ParameterGetter.brickButton' is never assigned to, and will always have its default value null
+34: Assets\Scripts\UI\InGameMenu.cs(11,41): warning CS0649: Field 'InGameMenu.exitPanel' is never assigned to, and will always have its default value null
+35: Assets\Scripts\Creator\ParameterGetter.cs(11,54): warning CS0649: Field 'ParameterGetter.steelCount' is never assigned to, and will always have its default value null
+36: Assets\Scripts\Creator\ParameterGetter.cs(11,31): warning CS0649: Field 'ParameterGetter.brickCount' is never assigned to, and will always have its default value null
+37: Assets\Scripts\TileComponents\TabletComponent.cs(15,22): warning CS0414: The field 'TabletComponent.wasSwiped' is assigned but its value is never used
+38: Assets\Scripts\Parsing\ParseState.cs(21,29): warning CS0414: The field 'ParseState.delete' is assigned but its value is never used
+39: Assets\Scripts\Tiles\Tile.cs(24,24): warning CS0414: The field 'Tile.colorUsesRemaining' is assigned but its value is never used
+40: Assets\Scripts\Creator\CreatorManager.cs(34,27): warning CS0414: The field 'CreatorManager.startBoardManager' is assigned but its value is never used
+41: Assets\Scripts\UI\OutlineButton.cs(18,18): warning CS0414: The field 'OutlineButton.shouldUpdate' is assigned but its value is never used
+
+- Errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.20 sec
+
+- Output (0 lines):
+
+- Errors (0 lines):
+
+********************************************************************************
+*                   Wednesday, November 27, 2019 8:25:01 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.4.228
+Unity version: 2017.4.30f1
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: E:\Game Dev C\Tiles
+Target profile directory: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5
+Unity Mono executable: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.7.0.62620)
+
+- Compilation ------------------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-103ccded1e7fef84fba87466a9c1e711
+Exit code: 0
+Elapsed time: 3.61 sec
+
+- Output (42 lines):
+0: Assets\Scripts\Boards\PlayerBoard.cs(14,17): warning CS0108: 'PlayerBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+1: Assets\Scripts\Boards\TargetBoard.cs(5,17): warning CS0108: 'TargetBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+2: Assets\Scripts\Parsing\ParseManager.cs(145,21): warning CS0219: The variable 'charsRemaining' is assigned but its value is never used
+3: Assets\Scripts\Parsing\ParseManager.cs(309,18): warning CS0219: The variable 'c' is assigned but its value is never used
+4: Assets\Scripts\Helpers\TileSprites.cs(17,21): warning CS0649: Field 'TileSprites.normal' is never assigned to, and will always have its default value null
+5: Assets\Scripts\Creator\ParameterGetter.cs(12,60): warning CS0649: Field 'ParameterGetter.steelButton' is never assigned to, and will always have its default value null
+6: Assets\Scripts\Helpers\TileSprites.cs(23,21): warning CS0649: Field 'TileSprites.battery4' is never assigned to, and will always have its default value null
+7: Assets\Scripts\Managers\SwipeManager.cs(14,70): warning CS0067: The event 'SwipeManager.swag' is never used
+8: Assets\Scripts\Helpers\TileSprites.cs(20,21): warning CS0649: Field 'TileSprites.battery1' is never assigned to, and will always have its default value null
+9: Assets\Scripts\Helpers\TileSprites.cs(24,21): warning CS0649: Field 'TileSprites.battery5' is never assigned to, and will always have its default value null
+10: Assets\Scripts\Helpers\TileSprites.cs(8,21): warning CS0649: Field 'TileSprites.pawn' is never assigned to, and will always have its default value null
+11: Assets\Scripts\Creator\CreatorManager.cs(31,26): warning CS0649: Field 'CreatorManager.valueBoxes' is never assigned to, and will always have its default value null
+12: Assets\Scripts\Creator\ParameterGetter.cs(12,35): warning CS0649: Field 'ParameterGetter.brickButton' is never assigned to, and will always have its default value null
+13: Assets\Scripts\Tiles\PlayerTile.cs(31,38): warning CS0649: Field 'PlayerTile.nextMode' is never assigned to, and will always have its default value
+14: Assets\Scripts\UI\PageTab.cs(28,28): warning CS0649: Field 'PageTab.image' is never assigned to, and will always have its default value null
+15: Assets\Scripts\Helpers\TileSprites.cs(9,21): warning CS0649: Field 'TileSprites.rook' is never assigned to, and will always have its default value null
+16: Assets\Scripts\UI\InGameMenu.cs(10,41): warning CS0649: Field 'InGameMenu.menuPanel' is never assigned to, and will always have its default value null
+17: Assets\Scripts\UI\InGameMenu.cs(11,41): warning CS0649: Field 'InGameMenu.exitPanel' is never assigned to, and will always have its default value null
+18: Assets\Scripts\Helpers\TileSprites.cs(22,21): warning CS0649: Field 'TileSprites.battery3' is never assigned to, and will always have its default value null
+19: Assets\Scripts\Helpers\TileSprites.cs(16,21): warning CS0649: Field 'TileSprites.hybrid' is never assigned to, and will always have its default value null
+20: Assets\Scripts\UI\LevelSelector.cs(11,41): warning CS0649: Field 'LevelSelector._selector' is never assigned to, and will always have its default value null
+21: Assets\Scripts\Helpers\TileSprites.cs(10,21): warning CS0649: Field 'TileSprites.knight' is never assigned to, and will always have its default value null
+22: Assets\Scripts\UI\InGameUI.cs(10,35): warning CS0649: Field 'InGameUI._limiterText' is never assigned to, and will always have its default value null
+23: Assets\Scripts\Helpers\TileSprites.cs(11,21): warning CS0649: Field 'TileSprites.bishop' is never assigned to, and will always have its default value null
+24: Assets\Scripts\Helpers\TileSprites.cs(12,21): warning CS0649: Field 'TileSprites.king' is never assigned to, and will always have its default value null
+25: Assets\Scripts\Creator\ParameterGetter.cs(11,31): warning CS0649: Field 'ParameterGetter.brickCount' is never assigned to, and will always have its default value null
+26: Assets\Scripts\UI\PageTab.cs(30,28): warning CS0649: Field 'PageTab.selectedColor' is never assigned to, and will always have its default value
+27: Assets\Scripts\Creator\ParameterGetter.cs(12,73): warning CS0649: Field 'ParameterGetter.amethystButton' is never assigned to, and will always have its default value null
+28: Assets\Scripts\Creator\CreatorManager.cs(29,26): warning CS0649: Field 'CreatorManager.TileImages' is never assigned to, and will always have its default value null
+29: Assets\Scripts\Creator\ParameterGetter.cs(12,48): warning CS0649: Field 'ParameterGetter.ironButton' is never assigned to, and will always have its default value null
+30: Assets\Scripts\Creator\ParameterGetter.cs(11,43): warning CS0649: Field 'ParameterGetter.ironCount' is never assigned to, and will always have its default value null
+31: Assets\Scripts\Helpers\TileSprites.cs(13,21): warning CS0649: Field 'TileSprites.queen' is never assigned to, and will always have its default value null
+32: Assets\Scripts\Creator\ParameterGetter.cs(11,66): warning CS0649: Field 'ParameterGetter.amethystCount' is never assigned to, and will always have its default value null
+33: Assets\Scripts\Managers\LevelManager.cs(9,18): warning CS0649: Field 'LevelManager.levelText' is never assigned to, and will always have its default value null
+34: Assets\Scripts\Creator\ParameterGetter.cs(11,54): warning CS0649: Field 'ParameterGetter.steelCount' is never assigned to, and will always have its default value null
+35: Assets\Scripts\Creator\CreatorManager.cs(33,26): warning CS0649: Field 'CreatorManager.SeedText' is never assigned to, and will always have its default value null
+36: Assets\Scripts\Helpers\TileSprites.cs(21,21): warning CS0649: Field 'TileSprites.battery2' is never assigned to, and will always have its default value null
+37: Assets\Scripts\Parsing\ParseState.cs(21,29): warning CS0414: The field 'ParseState.delete' is assigned but its value is never used
+38: Assets\Scripts\Creator\CreatorManager.cs(34,27): warning CS0414: The field 'CreatorManager.startBoardManager' is assigned but its value is never used
+39: Assets\Scripts\Tiles\Tile.cs(24,24): warning CS0414: The field 'Tile.colorUsesRemaining' is assigned but its value is never used
+40: Assets\Scripts\TileComponents\TabletComponent.cs(15,22): warning CS0414: The field 'TabletComponent.wasSwiped' is assigned but its value is never used
+41: Assets\Scripts\UI\OutlineButton.cs(18,18): warning CS0414: The field 'OutlineButton.shouldUpdate' is assigned but its value is never used
+
+- Errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.19 sec
+
+- Output (0 lines):
+
+- Errors (0 lines):
+
+********************************************************************************
+*                   Wednesday, November 27, 2019 8:26:53 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.4.228
+Unity version: 2017.4.30f1
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: E:\Game Dev C\Tiles
+Target profile directory: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5
+Unity Mono executable: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.7.0.62620)
+
+- Compilation ------------------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-f3cb285997c2c84459a134c516a1c8ac
+Exit code: 0
+Elapsed time: 3.54 sec
+
+- Output (42 lines):
+0: Assets\Scripts\Boards\PlayerBoard.cs(14,17): warning CS0108: 'PlayerBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+1: Assets\Scripts\Boards\TargetBoard.cs(5,17): warning CS0108: 'TargetBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+2: Assets\Scripts\Parsing\ParseManager.cs(145,21): warning CS0219: The variable 'charsRemaining' is assigned but its value is never used
+3: Assets\Scripts\Parsing\ParseManager.cs(309,18): warning CS0219: The variable 'c' is assigned but its value is never used
+4: Assets\Scripts\Helpers\TileSprites.cs(8,21): warning CS0649: Field 'TileSprites.pawn' is never assigned to, and will always have its default value null
+5: Assets\Scripts\Creator\ParameterGetter.cs(12,48): warning CS0649: Field 'ParameterGetter.ironButton' is never assigned to, and will always have its default value null
+6: Assets\Scripts\Managers\LevelManager.cs(9,18): warning CS0649: Field 'LevelManager.levelText' is never assigned to, and will always have its default value null
+7: Assets\Scripts\Helpers\TileSprites.cs(13,21): warning CS0649: Field 'TileSprites.queen' is never assigned to, and will always have its default value null
+8: Assets\Scripts\Helpers\TileSprites.cs(20,21): warning CS0649: Field 'TileSprites.battery1' is never assigned to, and will always have its default value null
+9: Assets\Scripts\Helpers\TileSprites.cs(24,21): warning CS0649: Field 'TileSprites.battery5' is never assigned to, and will always have its default value null
+10: Assets\Scripts\Tiles\PlayerTile.cs(31,38): warning CS0649: Field 'PlayerTile.nextMode' is never assigned to, and will always have its default value
+11: Assets\Scripts\UI\InGameMenu.cs(11,41): warning CS0649: Field 'InGameMenu.exitPanel' is never assigned to, and will always have its default value null
+12: Assets\Scripts\Creator\CreatorManager.cs(29,26): warning CS0649: Field 'CreatorManager.TileImages' is never assigned to, and will always have its default value null
+13: Assets\Scripts\Creator\ParameterGetter.cs(12,73): warning CS0649: Field 'ParameterGetter.amethystButton' is never assigned to, and will always have its default value null
+14: Assets\Scripts\Creator\ParameterGetter.cs(11,54): warning CS0649: Field 'ParameterGetter.steelCount' is never assigned to, and will always have its default value null
+15: Assets\Scripts\Creator\ParameterGetter.cs(11,66): warning CS0649: Field 'ParameterGetter.amethystCount' is never assigned to, and will always have its default value null
+16: Assets\Scripts\Helpers\TileSprites.cs(22,21): warning CS0649: Field 'TileSprites.battery3' is never assigned to, and will always have its default value null
+17: Assets\Scripts\Helpers\TileSprites.cs(16,21): warning CS0649: Field 'TileSprites.hybrid' is never assigned to, and will always have its default value null
+18: Assets\Scripts\Helpers\TileSprites.cs(23,21): warning CS0649: Field 'TileSprites.battery4' is never assigned to, and will always have its default value null
+19: Assets\Scripts\Creator\CreatorManager.cs(33,26): warning CS0649: Field 'CreatorManager.SeedText' is never assigned to, and will always have its default value null
+20: Assets\Scripts\Helpers\TileSprites.cs(11,21): warning CS0649: Field 'TileSprites.bishop' is never assigned to, and will always have its default value null
+21: Assets\Scripts\Managers\SwipeManager.cs(14,70): warning CS0067: The event 'SwipeManager.swag' is never used
+22: Assets\Scripts\Helpers\TileSprites.cs(21,21): warning CS0649: Field 'TileSprites.battery2' is never assigned to, and will always have its default value null
+23: Assets\Scripts\Helpers\TileSprites.cs(17,21): warning CS0649: Field 'TileSprites.normal' is never assigned to, and will always have its default value null
+24: Assets\Scripts\Creator\ParameterGetter.cs(12,35): warning CS0649: Field 'ParameterGetter.brickButton' is never assigned to, and will always have its default value null
+25: Assets\Scripts\UI\LevelSelector.cs(11,41): warning CS0649: Field 'LevelSelector._selector' is never assigned to, and will always have its default value null
+26: Assets\Scripts\Helpers\TileSprites.cs(9,21): warning CS0649: Field 'TileSprites.rook' is never assigned to, and will always have its default value null
+27: Assets\Scripts\UI\InGameMenu.cs(10,41): warning CS0649: Field 'InGameMenu.menuPanel' is never assigned to, and will always have its default value null
+28: Assets\Scripts\UI\PageTab.cs(28,28): warning CS0649: Field 'PageTab.image' is never assigned to, and will always have its default value null
+29: Assets\Scripts\UI\PageTab.cs(30,28): warning CS0649: Field 'PageTab.selectedColor' is never assigned to, and will always have its default value
+30: Assets\Scripts\Helpers\TileSprites.cs(10,21): warning CS0649: Field 'TileSprites.knight' is never assigned to, and will always have its default value null
+31: Assets\Scripts\Helpers\TileSprites.cs(12,21): warning CS0649: Field 'TileSprites.king' is never assigned to, and will always have its default value null
+32: Assets\Scripts\Creator\CreatorManager.cs(31,26): warning CS0649: Field 'CreatorManager.valueBoxes' is never assigned to, and will always have its default value null
+33: Assets\Scripts\UI\InGameUI.cs(10,35): warning CS0649: Field 'InGameUI._limiterText' is never assigned to, and will always have its default value null
+34: Assets\Scripts\Creator\ParameterGetter.cs(12,60): warning CS0649: Field 'ParameterGetter.steelButton' is never assigned to, and will always have its default value null
+35: Assets\Scripts\Creator\ParameterGetter.cs(11,43): warning CS0649: Field 'ParameterGetter.ironCount' is never assigned to, and will always have its default value null
+36: Assets\Scripts\Creator\ParameterGetter.cs(11,31): warning CS0649: Field 'ParameterGetter.brickCount' is never assigned to, and will always have its default value null
+37: Assets\Scripts\UI\OutlineButton.cs(18,18): warning CS0414: The field 'OutlineButton.shouldUpdate' is assigned but its value is never used
+38: Assets\Scripts\Creator\CreatorManager.cs(34,27): warning CS0414: The field 'CreatorManager.startBoardManager' is assigned but its value is never used
+39: Assets\Scripts\Parsing\ParseState.cs(21,29): warning CS0414: The field 'ParseState.delete' is assigned but its value is never used
+40: Assets\Scripts\Tiles\Tile.cs(24,24): warning CS0414: The field 'Tile.colorUsesRemaining' is assigned but its value is never used
+41: Assets\Scripts\TileComponents\TabletComponent.cs(15,22): warning CS0414: The field 'TabletComponent.wasSwiped' is assigned but its value is never used
+
+- Errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.20 sec
+
+- Output (0 lines):
+
+- Errors (0 lines):
+
+********************************************************************************
+*                   Wednesday, November 27, 2019 8:27:30 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.4.228
+Unity version: 2017.4.30f1
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: E:\Game Dev C\Tiles
+Target profile directory: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5
+Unity Mono executable: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.7.0.62620)
+
+- Compilation ------------------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-cf1af3901efa7f44880d685b6748734a
+Exit code: 0
+Elapsed time: 3.55 sec
+
+- Output (42 lines):
+0: Assets\Scripts\Boards\PlayerBoard.cs(14,17): warning CS0108: 'PlayerBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+1: Assets\Scripts\Boards\TargetBoard.cs(5,17): warning CS0108: 'TargetBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+2: Assets\Scripts\Parsing\ParseManager.cs(145,21): warning CS0219: The variable 'charsRemaining' is assigned but its value is never used
+3: Assets\Scripts\Parsing\ParseManager.cs(309,18): warning CS0219: The variable 'c' is assigned but its value is never used
+4: Assets\Scripts\Managers\SwipeManager.cs(14,70): warning CS0067: The event 'SwipeManager.swag' is never used
+5: Assets\Scripts\Helpers\TileSprites.cs(11,21): warning CS0649: Field 'TileSprites.bishop' is never assigned to, and will always have its default value null
+6: Assets\Scripts\Creator\CreatorManager.cs(31,26): warning CS0649: Field 'CreatorManager.valueBoxes' is never assigned to, and will always have its default value null
+7: Assets\Scripts\Creator\ParameterGetter.cs(11,31): warning CS0649: Field 'ParameterGetter.brickCount' is never assigned to, and will always have its default value null
+8: Assets\Scripts\Helpers\TileSprites.cs(12,21): warning CS0649: Field 'TileSprites.king' is never assigned to, and will always have its default value null
+9: Assets\Scripts\UI\PageTab.cs(28,28): warning CS0649: Field 'PageTab.image' is never assigned to, and will always have its default value null
+10: Assets\Scripts\UI\InGameUI.cs(10,35): warning CS0649: Field 'InGameUI._limiterText' is never assigned to, and will always have its default value null
+11: Assets\Scripts\Helpers\TileSprites.cs(9,21): warning CS0649: Field 'TileSprites.rook' is never assigned to, and will always have its default value null
+12: Assets\Scripts\Helpers\TileSprites.cs(21,21): warning CS0649: Field 'TileSprites.battery2' is never assigned to, and will always have its default value null
+13: Assets\Scripts\Creator\ParameterGetter.cs(12,48): warning CS0649: Field 'ParameterGetter.ironButton' is never assigned to, and will always have its default value null
+14: Assets\Scripts\Helpers\TileSprites.cs(20,21): warning CS0649: Field 'TileSprites.battery1' is never assigned to, and will always have its default value null
+15: Assets\Scripts\Helpers\TileSprites.cs(22,21): warning CS0649: Field 'TileSprites.battery3' is never assigned to, and will always have its default value null
+16: Assets\Scripts\Helpers\TileSprites.cs(10,21): warning CS0649: Field 'TileSprites.knight' is never assigned to, and will always have its default value null
+17: Assets\Scripts\Tiles\PlayerTile.cs(31,38): warning CS0649: Field 'PlayerTile.nextMode' is never assigned to, and will always have its default value
+18: Assets\Scripts\UI\LevelSelector.cs(11,41): warning CS0649: Field 'LevelSelector._selector' is never assigned to, and will always have its default value null
+19: Assets\Scripts\Helpers\TileSprites.cs(13,21): warning CS0649: Field 'TileSprites.queen' is never assigned to, and will always have its default value null
+20: Assets\Scripts\Helpers\TileSprites.cs(8,21): warning CS0649: Field 'TileSprites.pawn' is never assigned to, and will always have its default value null
+21: Assets\Scripts\UI\PageTab.cs(30,28): warning CS0649: Field 'PageTab.selectedColor' is never assigned to, and will always have its default value
+22: Assets\Scripts\Creator\ParameterGetter.cs(12,35): warning CS0649: Field 'ParameterGetter.brickButton' is never assigned to, and will always have its default value null
+23: Assets\Scripts\Creator\ParameterGetter.cs(11,43): warning CS0649: Field 'ParameterGetter.ironCount' is never assigned to, and will always have its default value null
+24: Assets\Scripts\Creator\ParameterGetter.cs(12,73): warning CS0649: Field 'ParameterGetter.amethystButton' is never assigned to, and will always have its default value null
+25: Assets\Scripts\Helpers\TileSprites.cs(24,21): warning CS0649: Field 'TileSprites.battery5' is never assigned to, and will always have its default value null
+26: Assets\Scripts\Creator\CreatorManager.cs(33,26): warning CS0649: Field 'CreatorManager.SeedText' is never assigned to, and will always have its default value null
+27: Assets\Scripts\Managers\LevelManager.cs(9,18): warning CS0649: Field 'LevelManager.levelText' is never assigned to, and will always have its default value null
+28: Assets\Scripts\Helpers\TileSprites.cs(23,21): warning CS0649: Field 'TileSprites.battery4' is never assigned to, and will always have its default value null
+29: Assets\Scripts\Creator\ParameterGetter.cs(12,60): warning CS0649: Field 'ParameterGetter.steelButton' is never assigned to, and will always have its default value null
+30: Assets\Scripts\Creator\ParameterGetter.cs(11,54): warning CS0649: Field 'ParameterGetter.steelCount' is never assigned to, and will always have its default value null
+31: Assets\Scripts\Helpers\TileSprites.cs(17,21): warning CS0649: Field 'TileSprites.normal' is never assigned to, and will always have its default value null
+32: Assets\Scripts\Creator\ParameterGetter.cs(11,66): warning CS0649: Field 'ParameterGetter.amethystCount' is never assigned to, and will always have its default value null
+33: Assets\Scripts\Creator\CreatorManager.cs(29,26): warning CS0649: Field 'CreatorManager.TileImages' is never assigned to, and will always have its default value null
+34: Assets\Scripts\UI\InGameMenu.cs(11,41): warning CS0649: Field 'InGameMenu.exitPanel' is never assigned to, and will always have its default value null
+35: Assets\Scripts\UI\InGameMenu.cs(10,41): warning CS0649: Field 'InGameMenu.menuPanel' is never assigned to, and will always have its default value null
+36: Assets\Scripts\Helpers\TileSprites.cs(16,21): warning CS0649: Field 'TileSprites.hybrid' is never assigned to, and will always have its default value null
+37: Assets\Scripts\Parsing\ParseState.cs(21,29): warning CS0414: The field 'ParseState.delete' is assigned but its value is never used
+38: Assets\Scripts\Creator\CreatorManager.cs(34,27): warning CS0414: The field 'CreatorManager.startBoardManager' is assigned but its value is never used
+39: Assets\Scripts\Tiles\Tile.cs(24,24): warning CS0414: The field 'Tile.colorUsesRemaining' is assigned but its value is never used
+40: Assets\Scripts\TileComponents\TabletComponent.cs(15,22): warning CS0414: The field 'TabletComponent.wasSwiped' is assigned but its value is never used
+41: Assets\Scripts\UI\OutlineButton.cs(18,18): warning CS0414: The field 'OutlineButton.shouldUpdate' is assigned but its value is never used
+
+- Errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.20 sec
+
+- Output (0 lines):
+
+- Errors (0 lines):
+
+********************************************************************************
+*                   Wednesday, November 27, 2019 8:30:01 PM                    *
+********************************************************************************
+CSharpCompilerWrapper.exe version: 4.0.4.228
+Unity version: 2017.4.30f1
+Platform: Windows
+Target assembly: Assembly-CSharp.dll
+Project directory: E:\Game Dev C\Tiles
+Target profile directory: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\4.5
+Unity Mono executable: D:\Program Files\Unity\Editor\Data\MonoBleedingEdge\bin\mono.exe
+Compiler: Microsoft C# 7.2 (2.7.0.62620)
+
+- Compilation ------------------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\csc.exe
+Arguments: -noconfig @Temp/UnityTempFile-13de3555c56090346b52eb39eacc850a
+Exit code: 0
+Elapsed time: 3.55 sec
+
+- Output (42 lines):
+0: Assets\Scripts\Boards\PlayerBoard.cs(14,17): warning CS0108: 'PlayerBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+1: Assets\Scripts\Boards\TargetBoard.cs(5,17): warning CS0108: 'TargetBoard.Awake()' hides inherited member 'Board.Awake()'. Use the new keyword if hiding was intended.
+2: Assets\Scripts\Parsing\ParseManager.cs(145,21): warning CS0219: The variable 'charsRemaining' is assigned but its value is never used
+3: Assets\Scripts\Parsing\ParseManager.cs(309,18): warning CS0219: The variable 'c' is assigned but its value is never used
+4: Assets\Scripts\Creator\ParameterGetter.cs(12,48): warning CS0649: Field 'ParameterGetter.ironButton' is never assigned to, and will always have its default value null
+5: Assets\Scripts\Helpers\TileSprites.cs(10,21): warning CS0649: Field 'TileSprites.knight' is never assigned to, and will always have its default value null
+6: Assets\Scripts\Creator\CreatorManager.cs(29,26): warning CS0649: Field 'CreatorManager.TileImages' is never assigned to, and will always have its default value null
+7: Assets\Scripts\Creator\ParameterGetter.cs(11,66): warning CS0649: Field 'ParameterGetter.amethystCount' is never assigned to, and will always have its default value null
+8: Assets\Scripts\Helpers\TileSprites.cs(24,21): warning CS0649: Field 'TileSprites.battery5' is never assigned to, and will always have its default value null
+9: Assets\Scripts\Creator\ParameterGetter.cs(12,35): warning CS0649: Field 'ParameterGetter.brickButton' is never assigned to, and will always have its default value null
+10: Assets\Scripts\Helpers\TileSprites.cs(11,21): warning CS0649: Field 'TileSprites.bishop' is never assigned to, and will always have its default value null
+11: Assets\Scripts\Helpers\TileSprites.cs(9,21): warning CS0649: Field 'TileSprites.rook' is never assigned to, and will always have its default value null
+12: Assets\Scripts\UI\InGameMenu.cs(11,41): warning CS0649: Field 'InGameMenu.exitPanel' is never assigned to, and will always have its default value null
+13: Assets\Scripts\Helpers\TileSprites.cs(16,21): warning CS0649: Field 'TileSprites.hybrid' is never assigned to, and will always have its default value null
+14: Assets\Scripts\UI\PageTab.cs(30,28): warning CS0649: Field 'PageTab.selectedColor' is never assigned to, and will always have its default value
+15: Assets\Scripts\Creator\CreatorManager.cs(31,26): warning CS0649: Field 'CreatorManager.valueBoxes' is never assigned to, and will always have its default value null
+16: Assets\Scripts\Helpers\TileSprites.cs(21,21): warning CS0649: Field 'TileSprites.battery2' is never assigned to, and will always have its default value null
+17: Assets\Scripts\UI\InGameMenu.cs(10,41): warning CS0649: Field 'InGameMenu.menuPanel' is never assigned to, and will always have its default value null
+18: Assets\Scripts\Helpers\TileSprites.cs(23,21): warning CS0649: Field 'TileSprites.battery4' is never assigned to, and will always have its default value null
+19: Assets\Scripts\Helpers\TileSprites.cs(17,21): warning CS0649: Field 'TileSprites.normal' is never assigned to, and will always have its default value null
+20: Assets\Scripts\Creator\CreatorManager.cs(33,26): warning CS0649: Field 'CreatorManager.SeedText' is never assigned to, and will always have its default value null
+21: Assets\Scripts\Creator\ParameterGetter.cs(12,73): warning CS0649: Field 'ParameterGetter.amethystButton' is never assigned to, and will always have its default value null
+22: Assets\Scripts\Helpers\TileSprites.cs(12,21): warning CS0649: Field 'TileSprites.king' is never assigned to, and will always have its default value null
+23: Assets\Scripts\Managers\SwipeManager.cs(14,70): warning CS0067: The event 'SwipeManager.swag' is never used
+24: Assets\Scripts\UI\InGameUI.cs(10,35): warning CS0649: Field 'InGameUI._limiterText' is never assigned to, and will always have its default value null
+25: Assets\Scripts\Creator\ParameterGetter.cs(11,54): warning CS0649: Field 'ParameterGetter.steelCount' is never assigned to, and will always have its default value null
+26: Assets\Scripts\Helpers\TileSprites.cs(22,21): warning CS0649: Field 'TileSprites.battery3' is never assigned to, and will always have its default value null
+27: Assets\Scripts\Helpers\TileSprites.cs(20,21): warning CS0649: Field 'TileSprites.battery1' is never assigned to, and will always have its default value null
+28: Assets\Scripts\Helpers\TileSprites.cs(8,21): warning CS0649: Field 'TileSprites.pawn' is never assigned to, and will always have its default value null
+29: Assets\Scripts\Creator\ParameterGetter.cs(11,43): warning CS0649: Field 'ParameterGetter.ironCount' is never assigned to, and will always have its default value null
+30: Assets\Scripts\UI\PageTab.cs(28,28): warning CS0649: Field 'PageTab.image' is never assigned to, and will always have its default value null
+31: Assets\Scripts\Creator\ParameterGetter.cs(12,60): warning CS0649: Field 'ParameterGetter.steelButton' is never assigned to, and will always have its default value null
+32: Assets\Scripts\Tiles\PlayerTile.cs(31,38): warning CS0649: Field 'PlayerTile.nextMode' is never assigned to, and will always have its default value
+33: Assets\Scripts\Managers\LevelManager.cs(9,18): warning CS0649: Field 'LevelManager.levelText' is never assigned to, and will always have its default value null
+34: Assets\Scripts\Helpers\TileSprites.cs(13,21): warning CS0649: Field 'TileSprites.queen' is never assigned to, and will always have its default value null
+35: Assets\Scripts\UI\LevelSelector.cs(11,41): warning CS0649: Field 'LevelSelector._selector' is never assigned to, and will always have its default value null
+36: Assets\Scripts\Creator\ParameterGetter.cs(11,31): warning CS0649: Field 'ParameterGetter.brickCount' is never assigned to, and will always have its default value null
+37: Assets\Scripts\Parsing\ParseState.cs(21,29): warning CS0414: The field 'ParseState.delete' is assigned but its value is never used
+38: Assets\Scripts\UI\OutlineButton.cs(18,18): warning CS0414: The field 'OutlineButton.shouldUpdate' is assigned but its value is never used
+39: Assets\Scripts\Creator\CreatorManager.cs(34,27): warning CS0414: The field 'CreatorManager.startBoardManager' is assigned but its value is never used
+40: Assets\Scripts\Tiles\Tile.cs(24,24): warning CS0414: The field 'Tile.colorUsesRemaining' is assigned but its value is never used
+41: Assets\Scripts\TileComponents\TabletComponent.cs(15,22): warning CS0414: The field 'TabletComponent.wasSwiped' is assigned but its value is never used
+
+- Errors (0 lines):
+
+- PDB to MDB conversion --------------------------------------
+
+Process: E:\Game Dev C\Tiles\CSharp70Support\Roslyn\pdb2mdb.exe
+Arguments: Temp\Assembly-CSharp.dll
+Exit code: 0
+Elapsed time: 0.22 sec
+
+- Output (0 lines):
+
+- Errors (0 lines):
+
