@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using ExtensionMethods;
+﻿using UnityEngine;
 using static PathDebugger;
 
 public class CameraRatio : MonoBehaviour

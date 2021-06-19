@@ -1,14 +1,14 @@
-﻿using Tiles.Components;
+﻿using Tiles.Modules;
 using ExtensionMethods;
 using System.Collections.Generic;
 using static PathDebugger;
 
 public abstract class NotifyList 
 {
-    protected readonly List<TileComponent> list = new List<TileComponent>();
+    protected readonly List<TileModule> list = new List<TileModule>();
 
-    public void Add(TileComponent component)    => list.AddUnique(component);
-    public void Remove(TileComponent component) => list.Remove(component);
+    public void Add(TileModule component)    => list.AddUnique(component);
+    public void Remove(TileModule component) => list.Remove(component);
 
     public abstract void Notify();
 }

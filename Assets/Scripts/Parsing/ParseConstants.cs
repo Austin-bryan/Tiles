@@ -60,7 +60,7 @@ namespace Tiles.Parsing
             ["dpi"] = DarkPink,     ["do"] = DarkOrange, ["dc"]  = DarkCyan, ["dp"] = DarkPurple,  ["dm"]  = DarkMagenta, ["z"]  = WallColor,
             ["x"]   = GapColor,     ["pi"] = Pink
         };
-        public static readonly Dictionary<string, GameMode>  GameModeParseKey  = new Dictionary<string, GameMode>()  { [""]   = Moves, ["Move"] = Moves, ["Fire"] = Fire, ["Time"] = Timed, ["Rotate"] = RotateOnly, ["Brick"] = Bricks, };
+        public static readonly Dictionary<string, GameMode>  GameModeParseKey  = new Dictionary<string, GameMode>()  { [""]   = Moves, ["Move"] = Moves, ["Fire"] = Fire, ["Time"] = Timed, ["Brick"] = Bricks, };
         public static readonly Dictionary<string, Direction> DirectionParseKey = new Dictionary<string, Direction>() { ["u"]  = Up,    ["d"]    = Down,  ["l"]    = Left, ["r"]    = Right };
         public static readonly Dictionary<string, SwipeType> SwipeTypeParseKey = new Dictionary<string, SwipeType>() { ["bl"] = SwipeType.None, ["br"] = Bronze, ["s"]  = Silver, ["g"]  = Gold };
     }

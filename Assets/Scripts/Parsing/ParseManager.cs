@@ -3,7 +3,7 @@ using System;
 using UnityEngine;
 using System.Linq;
 using Tiles.Parsing;
-using Tiles.Components;
+using Tiles.Modules;
 using ExtensionMethods;
 using System.Collections.Generic;
 using static TileColor;
@@ -189,7 +189,7 @@ public class ParseManager : MonoBehaviour
         var swappedKey = TileColorParseKey.Swap();
         return TileColorParseKey.Swap().ContainsKey(tileColor) ? swappedKey[tileColor] : default;
     }
-    public static string ReverseParseComponents(List<TileComponent> components)
+    public static string ReverseParseModules(List<TileModule> components)
     {
         var parseKey = TileTypeParseKey.Swap();
         return ReverseParseProperty();
@@ -199,7 +199,7 @@ public class ParseManager : MonoBehaviour
         string ReverseParseProperty() => ReverseParseItem(false, components, c => $".{parseKey[c.TileType]}{ReverseParseParameters(c)}", c => $"{parseKey[c.TileType]}{ReverseParseParameters(c)}", r => $".{{{r}}}");
 
         // Converts paramters into code
-        string ReverseParseParameters(TileComponent component) => ReverseParseItem(true, component.Parameters, p => $".{p}", p => p, r => $"({r})");
+        string ReverseParseParameters(TileModule component) => ReverseParseItem(true, component.Parameters, p => $".{p}", p => p, r => $"({r})");
         string ReverseParseItem<T>(bool should, List<T> list, Func<T, string> formatSingle, Func<T, string> multiReverseFormat, Func<string, string> formatMulti)
         {
             string result = "";

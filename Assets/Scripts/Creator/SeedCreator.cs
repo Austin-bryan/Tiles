@@ -50,7 +50,7 @@ public class SeedCreator : MonoBehaviour
             // ---- Nested Local Functions ---- //
             string ReverseParse(CreatorTile tile)
             {
-                string parsedType = ReverseParseComponents(tile.Sides.CurrentSideComponents);
+                string parsedType = ReverseParseModules(tile.Modules);
 
                 if (parsedType == "x" || parsedType == "z") return parsedType;
                 if (parsedType == "") return ReverseParseColor(tile.Color);

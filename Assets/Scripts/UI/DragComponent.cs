@@ -3,7 +3,7 @@ using System.Linq;
 using ExtensionMethods;	
 using static PathDebugger;
 
-public class DragComponent : MonoBehaviour
+public class DragModule : MonoBehaviour
 {
     public CreatorLevelDialog[] MovingObject;
     public RectTransform BaseObject;

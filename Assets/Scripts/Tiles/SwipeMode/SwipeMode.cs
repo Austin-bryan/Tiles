@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using Tiles.Factories;
-using Tiles.Components;
+using Tiles.Modules;
 using ExtensionMethods;
 using System.Collections.Generic;
 using static SwipeStyle;
@@ -9,21 +9,19 @@ using static BoardManager;
 using static PlayerTile.ObstructionState;
 using ObstructState = PlayerTile.ObstructionState;
 
-public enum SwipeStyle { Layer, Diagonal, Hybrid } 
-
 public partial class PlayerTile
 {
     public abstract class SwipeMode : MoveMode
     {
-        public virtual SwipeStyle Style       { get; }
-        public SwipeStyle ModeToRevert        { get; set; }
-        public List<int> SwipeQueueIndexes    { get; private set; }
+        public virtual SwipeStyle Style { get; }
+        public SwipeStyle OriginalStyle { get; set; }
+        public List<int> SwipeQueueIndexes { get; private set; }    // See if this line of code is even needed
 
-        protected bool isMovingIntoWall, layerHasWall, shouldDestroy;
-        protected Direction currentDirection;
+        protected bool IsMovingIntoWall, MovementGroupHasWrapTile, ShouldDestroy;
+        protected Direction CurrentDirection;
 
         private readonly static Dictionary<PlayerTile, bool> oneSwipeTiles = new Dictionary<PlayerTile, bool>();
-        private static List<PlayerTile> layerTiles;
+        private static List<PlayerTile> movementGroup;
 
         private bool isTemporarilyObstructing;
         private const float scaleConstant = 38;
@@ -31,50 +29,72 @@ public partial class PlayerTile
         // ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡    Methods    ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡ //
         public SwipeMode(PlayerTile tile) : base(tile) => SwipeQueueIndexes = new List<int>();
 
-        protected abstract void GetLayerTiles(Direction direction, ref List<PlayerTile> tiles);
+        protected abstract void AddRange(ref List<PlayerTile> tiles, Direction direction, PlayerTile tile, ref bool foundWall);
+        protected void GetMovementGroup(Direction direction, ref List<PlayerTile> layerTiles)
+        {
+            MovementGroupHasWrapTile = getLayer(out List<PlayerTile> foundTiles, direction.ToLayerType());
+            layerTiles.AddRange(foundTiles);
+            layerTiles.Remove(tile);
+
+            // ---- Local Functions ---- //
+            bool getLayer(out List<PlayerTile> tiles, LayerType layerType)
+            {
+                bool foundWall = false;
+
+                tiles = new List<PlayerTile>();
+                AddRange(ref tiles, direction, tile, ref foundWall);
+
+                return foundWall;
+            }
+        }
 
         public static void AddToOneSwipeList(PlayerTile tile)
         {
-            if (tile.Sides.HasOneSwipeComponent() && !oneSwipeTiles.ContainsKey(tile)) oneSwipeTiles.Add(tile, true);
+            if (tile.Sides.HasOneSwipeModule() && !oneSwipeTiles.ContainsKey(tile)) oneSwipeTiles.Add(tile, true);
         }
-        public static SwipeMode GetSwipeMode(SwipeStyle swipeStyle, PlayerTile tile) => swipeStyle switch
+        public static SwipeMode CreateNewSwipeMode(SwipeStyle swipeStyle, PlayerTile tile) => swipeStyle switch
         {
-            Layer    => new LayerSwipeMode(tile),
-            Hybrid   => new HybridSwipeMode(tile),
-            Diagonal => new DiagonalSwipeMode(tile),
-            _        => default,
+            Ordinal  => new OrdinalSwipeMode(tile),
+            Cardinal => new CardinalSwipeMode(tile),
+            EightWay => new EightWaySwipeMode(tile),
+            _ => default,
         };
-     
-        // Swiping //
-        public virtual void BeginSwipe (Direction direction, bool playerTriggered)
+
+        // ---- Swiping ---- //
+        public override void InitiateTilesInMovementGroup(Direction direction, bool playerTriggered)
         {
-            List<PlayerTile> oldTiles = null;
-            
-            if (layerTiles != null) oldTiles = layerTiles.Duplicate();
+            Path4();
+            List<PlayerTile> oldMovementGroup = null;
 
-            (layerTiles, currentDirection, hasBeenObstructed) = (new List<PlayerTile>(), direction, false);
+            if (movementGroup != null) oldMovementGroup = movementGroup.Duplicate();
 
-            SwipeManager.BeginSwipe(currentDirection);
+            (movementGroup, CurrentDirection, hasBeenObstructed) = (new List<PlayerTile>(), direction, false);
+
+            SwipeManager.BeginSwipe(CurrentDirection);
             tileAudio.PlaySwipe();
 
-            GetLayerTiles(direction, ref layerTiles);
+            GetMovementGroup(direction, ref movementGroup);
 
-            if (oldTiles != null) oldTiles.ForEach(t =>
-                {
-                    if (!layerTiles.Contains(t)) t.Sides.CurrentSideComponents.ForEach(c => c.OnFocusLost());
-                });
-            layerTiles.ForEach(t => t.Sides.CurrentSideComponents.ForEach(c => c.ValidateSwipe(currentDirection, playerTriggered)));
+            // Checks the old movement group for tiles that are not in the current group, then notifies them to preform certain actions
+            if (oldMovementGroup != null)
+                foreach (var tile in oldMovementGroup)
+                    if (!movementGroup.Contains(tile)) 
+                        tile.Modules.ForEach(component => component.OnLevelMemberGroup());
+            // If there is one 
+            foreach (var tile in movementGroup)
+                foreach (var component in tile.Modules)
+                    component.ValidateSwipe(CurrentDirection, playerTriggered);
 
-            (layerTiles, currentDirection, hasBeenObstructed) = (new List<PlayerTile>(), direction, false);
-            GetLayerTiles(direction, ref layerTiles);
+            (movementGroup, CurrentDirection, hasBeenObstructed) = (new List<PlayerTile>(), direction, false);
+            GetMovementGroup(direction, ref movementGroup);
 
             // Find Obstructing tiles
-            for (int i = 0; i < layerTiles.Count; i++)
+            for (int i = 0; i < movementGroup.Count; i++)
             {
-                var tile = layerTiles[i];
+                var tile = movementGroup[i];
                 if (tile == null) continue;
 
-                if (tile.SwipeStyle == Diagonal && SwipeManager.CurrentDirection.IsLayer())
+                if (tile.SwipeStyle == Ordinal && SwipeManager.CurrentDirection.IsLayer())
                 {
                     if (!tile.IsSwipeObstructed())
                     {
@@ -86,77 +106,77 @@ public partial class PlayerTile
             }
 
             // Swipe tile if it should be
-            for (int i = 0; i < layerTiles.Count; i++)
+            for (int i = 0; i < movementGroup.Count; i++)
             {
-                var tile = layerTiles[i];
+                var tile = movementGroup[i];
                 if (tile == null || !tile.IsMovable) continue;
-                
-                tile.SwipingMode.layerHasWall = layerHasWall;
-                tile.SwipingMode.Swipe(direction, playerTriggered, true);
+
+                tile.SwipingMode.MovementGroupHasWrapTile = MovementGroupHasWrapTile;
+                tile.SwipingMode.StartMovement(direction, playerTriggered, true);
             }
         }
-        public          void Swipe      (Direction direction, bool? _playerTriggered, bool shouldSpawnOpposite)
+        public override void StartMovement(Direction direction, bool? _playerTriggered, bool shouldSpawnOpposite)
         {
-            (currentDirection, playerTriggered) = (direction, _playerTriggered);
+            (CurrentDirection, playerTriggered) = (direction, _playerTriggered);
             GetNewCoord();
 
             var x = PBoard[NewCoord];
 
-            tile.Sides.CurrentSideComponents.ForEach(t => t.TrySwipe(direction, playerTriggered, shouldSpawnOpposite, hasBeenObstructed));
+            tile.Modules.ForEach(t => t.TrySwipe(direction, playerTriggered, shouldSpawnOpposite, hasBeenObstructed));
 
             var oldTrans = tile.transform.ToTransform();
 
             if (hasBeenObstructed && ObstructionState == Idle) ObstructionState = NeedsToSwipeBack;
-            else if (!NewCoord.IsInFrame() || isMovingIntoWall)
+            else if (!NewCoord.IsInFrame() || IsMovingIntoWall)
             {
-                SpawnTileInCurDirection(isMovingIntoWall);
-                shouldDestroy = true;
+                SpawnTileInCurDirection(IsMovingIntoWall);
+                ShouldDestroy = true;
             }
 
             tile.UpdateTargetLocation();
             tile.isBeingSwiped = true;
             tile.tileSpeed.UpdateObstruction(hasBeenObstructed);
         }
-        public override void FinishSwipe()
+        public override void FinishMovement()
         {
             if (hasBeenObstructed && ObstructionState == NeedsToSwipeBack)
             {
                 ObstructionState = IsSwipingBack;
                 tile.Coord = NewCoord;
-                tile.SwipingMode.Swipe(currentDirection.GetOppositeDirection(), false, false);
+                tile.SwipingMode.StartMovement(CurrentDirection.GetOppositeDirection(), false, false);
 
                 return;
             }
-            else if (ObstructionState == IsSwipingBack) 
+            else if (ObstructionState == IsSwipingBack)
             {
                 ObstructionState = Idle;
-                
+
                 if (tile.SwipingMode.isTemporarilyObstructing && tile.IsSwipeObstructed())
                     tile.SetIsSwipeObstructed(false);
-                return; 
+                return;
             }
 
             if (SwipeManager.ActiveTile == tile) SwipeManager.FinishTurn();
-            if (shouldDestroy)     tile.Delay(0.5f, tile.Destroy);
-            if (!isMovingIntoWall) tile.SetCoord(NewCoord);
+            if (ShouldDestroy) tile.Delay(0.5f, tile.Destroy);
+            if (!IsMovingIntoWall) tile.SetCoord(NewCoord);
 
-            (tile.isBeingSwiped, isMovingIntoWall, layerHasWall) = (false, false, false);
+            (tile.isBeingSwiped, IsMovingIntoWall, MovementGroupHasWrapTile) = (false, false, false);
 
             if (!hasBeenObstructed) tile.Delay(0f, SendPropertiesToPreviousTile);  // DON'T DO IF NOT PLAYER TRIGGERED
             if (tile.shouldRevertMode) RevertMode();
-            if (Temporary)
+            if (IsTemporary)
             {
-                tile.SetSwipeMode(ModeToRevert, false);
-                Temporary = false;
+                tile.SetSwipeMode(OriginalStyle, false);
+                IsTemporary = false;
             }
 
-            tile.Sides.CurrentSideComponents.ForEach(c => c.FinishSwipe(tile.isNewTile)); 
+            tile.Modules.ForEach(c => c.FinishSwipe(tile.isNewTile));
             tile.UpdateSolved();
             tile.isNewTile = false;
 
             if (tile.queuedStyle != null)
             {
-                tile.SetSwipeMode(tile.queuedStyle ?? Layer, false);
+                tile.SetSwipeMode(tile.queuedStyle ?? Cardinal, false);
                 tile.queuedStyle = null;
             }
 
@@ -165,9 +185,9 @@ public partial class PlayerTile
             {
                 if (!(oneSwipeTiles.Keys.Contains(tile) && oneSwipeTiles[tile])) return;
 
-                var types      = new TileType[tile.Sides.Count][];
-                var newTile    = GetTile();
-                int sideCount  = 0;
+                var types = new TileType[tile.Sides.Count][];
+                var newTile = GetTile();
+                int sideCount = 0;
                 var initalSide = tile.Sides.CurrentIndex;
 
                 // Gets all the types on each side and stores them in 2D array where the outer array represent a side
@@ -186,7 +206,7 @@ public partial class PlayerTile
                     if (sideCount > 0)
                     {
                         // Adds a side to newTile if it needs it
-                        if (newTile.Sides.Count < sideCount + 1)        
+                        if (newTile.Sides.Count < sideCount + 1)
                             newTile.Sides.AddSide(newTile.Color, true);
                         newTile.Sides.NextSide();
                     }
@@ -200,10 +220,10 @@ public partial class PlayerTile
 
                         var factory = TileFactory.GetFactory(type);
 
-                        if (factory == null || newTile.Sides.HasComponent(type)) continue;
+                        if (factory == null || newTile.Sides.HasModule(type)) continue;
 
-                        newTile.AddComponent(type, factory.GetComponent(newTile, tile.Get(type).Parameters, true));
-                        newTile.AddComponents();
+                        newTile.AddModule(type, factory.GetModule(newTile, tile.Get(type).Parameters, true));
+                        newTile.AddModules();
                     }
                     sideCount++;
                 }
@@ -218,44 +238,43 @@ public partial class PlayerTile
                     void bar() => oneSwipeTiles[newTile] = true;
                 }
 
-                tile.Sides.RemoveOneSwipeComponents();
+                tile.Sides.RemoveOneSwipeModules();
                 newTile.Sides.ChangeSide(initalSide);
 
                 tile.Sides.RemoveOneSwipeSides();
             }
-            PlayerTile GetTile() => PBoard.Get(currentDirection.IsHorizontal() ? NewCoord + currentDirection : NewCoord - currentDirection);
+            PlayerTile GetTile() => PBoard.Get(CurrentDirection.IsHorizontal() ? NewCoord + CurrentDirection : NewCoord - CurrentDirection);
         }
-        
+
+        public static SwipeMode CreateSwipeMode(SwipeStyle style, PlayerTile tile) => style switch
+        {
+            SwipeStyle.Cardinal => new CardinalSwipeMode(tile),
+            SwipeStyle.Ordinal  => new OrdinalSwipeMode(tile),
+            SwipeStyle.EightWay => new EightWaySwipeMode(tile),
+            _ => null
+        };
+
         public Coord GetOppositeCoord()
         {
-            if (currentDirection.IsDiagonal()) return NewCoord.GetOppositeDiagonal();
-            return tile.Coord.GetOppositeCoord(currentDirection);
+            if (CurrentDirection.IsOrdinal()) return NewCoord.GetOppositeDiagonal();
+            return tile.Coord.GetOppositeCoord(CurrentDirection);
         }
         protected void GetNewCoord()
         {
             NewCoord = tile.Coord;
 
-            do NewCoord += currentDirection;
+            do NewCoord += CurrentDirection;
             while (PBoard[NewCoord].To<PlayerTile>()?.HasGap() ?? false);
 
-            tileMovingInto   = PBoard[NewCoord].To<PlayerTile>();
-            isMovingIntoWall = tileMovingInto?.HasWall() ?? false;
+            tileMovingInto = PBoard[NewCoord].To<PlayerTile>();
+            IsMovingIntoWall = tileMovingInto?.HasWall() ?? false;
         }
-        
-        private void RevertMode()
-        {
-            if (tile.SwipeStyle != tile.originalMode)
-            {
-                tile.shouldRevertMode = false;
-                tile.SetSwipeMode(tile.originalMode, false);
-            }
-            else tile.SetSwipeMode(tile.nextMode, false);
-        }
+
         private void SpawnTileInCurDirection(bool shouldSpawnOpposite)
         {
             var newTile      = Instantiate(tile);
             var workingCoord = NewCoord;
-            workingCoord     = layerHasWall ? WallComponent.GetCoordOfWallToSpawnAt(currentDirection) : (NewCoord - currentDirection).GetOppositeCoord(currentDirection);
+            workingCoord     = MovementGroupHasWrapTile ? WrapModule.GetCoordOfWallToSpawnAt(CurrentDirection) : (NewCoord - CurrentDirection).GetOppositeCoord(CurrentDirection);
 
             setupTile();
 
@@ -265,13 +284,13 @@ public partial class PlayerTile
                 newTile.SetSwipeMode(tile.originalMode, true);
                 newTile.SetCoord(workingCoord);
                 (newTile.name, newTile.shouldColor, newTile.SwipingMode.SwipeQueueIndexes) = ($"Tile {tile.ID}", false, SwipeQueueIndexes);
-                (newTile.Sides, newTile.Directions) = (tile.Sides, tile.Directions.Duplicate());
+                newTile.Sides = tile.Sides;
                 newTile.Sides.SetTile(newTile);
                 newTile.SetPosition(PBoard.GetSlotTransform(workingCoord, true).Location);
                 newTile.BeginPlay();
                 newTile.UpdateID(tile.ID);
                 newTile.SetParent(PBoard);
-                newTile.SwipingMode.Swipe(currentDirection, null, shouldSpawnOpposite);
+                newTile.SwipingMode.StartMovement(CurrentDirection, null, shouldSpawnOpposite);
                 newTile.MatchColor(tile);
                 newTile.queuedStyle = tile.queuedStyle;
                 newTile.isNewTile = true;

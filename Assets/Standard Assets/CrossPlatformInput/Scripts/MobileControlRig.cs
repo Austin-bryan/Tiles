@@ -26,13 +26,7 @@ namespace UnityStandardAssets.CrossPlatformInput
 		CheckEnableControlRig();
 	}
 #else
-        public int callbackOrder
-        {
-            get
-            {
-                return 1;
-            }
-        }
+        public int callbackOrder => 1;
 #endif
 
         private void Start()
@@ -55,24 +49,10 @@ namespace UnityStandardAssets.CrossPlatformInput
 
 #if UNITY_EDITOR
 
-        private void OnEnable()
-        {
-            EditorApplication.update += Update;
-        }
-
-
-        private void OnDisable()
-        {
-            EditorApplication.update -= Update;
-        }
-
-
-        private void Update()
-        {
-            CheckEnableControlRig();
-        }
+        private void OnEnable()  => EditorApplication.update += Update;
+        private void OnDisable() => EditorApplication.update -= Update;
+        private void Update()    => CheckEnableControlRig();
 #endif
-
 
         private void CheckEnableControlRig()
         {
@@ -87,16 +67,11 @@ namespace UnityStandardAssets.CrossPlatformInput
         private void EnableControlRig(bool enabled)
         {
             foreach (Transform t in transform)
-            {
                 t.gameObject.SetActive(enabled);
-            }
         }
 
 #if UNITY_EDITOR
-        public void OnActiveBuildTargetChanged(BuildTarget previousTarget, BuildTarget newTarget)
-        {
-            CheckEnableControlRig();
-        }
+        public void OnActiveBuildTargetChanged(BuildTarget previousTarget, BuildTarget newTarget) => CheckEnableControlRig();
 #endif
     }
-}
+}//102

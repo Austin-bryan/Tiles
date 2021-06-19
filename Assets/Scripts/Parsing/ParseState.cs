@@ -2,7 +2,7 @@
 using System.Linq;
 using Tiles.Factories;
 using ExtensionMethods;
-using Tiles.Components;
+using Tiles.Modules;
 using System.Collections.Generic;
 using static TileType;
 using static PathDebugger;
@@ -30,7 +30,7 @@ namespace Tiles.Parsing
         public virtual void ParseLeftBrace()    => Error(LeftBrace);
         public virtual void ParseLeftParen()    => Error(LeftParen);
         public virtual void ParseLeftAngle()    => Error(LeftAngle);
-        public virtual void ParseSemiColon()    => L (CreateComponent, ResetAll);
+        public virtual void ParseSemiColon()    => L (CreateModule, ResetAll);
         public virtual void ParseRightBrace()   => Error(RightBrace);
         public virtual void ParseRightParen()   => Error(RightParen);
         public virtual void ParseRightAngle()   => Error(RightAngle);
@@ -38,7 +38,7 @@ namespace Tiles.Parsing
         public virtual void ParseRightBracket() => Error(RightBracket);
         public virtual void ParseSeperator()
         {
-            CreateComponent();
+            CreateModule();
             ParseNextTile();
             ResetAll();
         }
@@ -54,7 +54,7 @@ namespace Tiles.Parsing
             ParseManager.Reset();
         }
       
-        protected void CreateComponent()
+        protected void CreateModule()
         {
             if (CurrentProperty == null) return;
 
@@ -65,23 +65,17 @@ namespace Tiles.Parsing
                 string chessType = ParsedParameters[0];
                 delete = true;
 
-                var piece = ChessComponent.GetPiece(chessType);
+                var piece = ChessModule.GetPiece(chessType);
                 type = piece.ToTileType();
             }
 
             var factory = TileFactory.GetFactory(type);
-            if (factory == null || CurrentTile.Sides.HasComponent(type)) return;
+            if (factory == null || CurrentTile.Sides.HasModule(type)) return;
 
-            var component = factory.GetComponent(CurrentTile, ParsedParameters, IsGrid);
+            var component = factory.GetModule(CurrentTile, ParsedParameters, IsGrid);
 
-            CurrentTile.AddComponent(type, component);
-            CurrentTile.AddComponents();
-
-            if (component.HasMiniVersion)
-            {
-                var miniBuilder = MiniTileBuilder.GetMiniTileBuilder(type);
-                miniBuilder.Add(CurrentTile, (RotateComponent)component);
-            }
+            CurrentTile.AddModule(type, component);
+            CurrentTile.AddModules();
 
             ParameterState.Reset();
             PropertyState.Reset();

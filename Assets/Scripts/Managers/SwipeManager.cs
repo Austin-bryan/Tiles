@@ -1,6 +1,6 @@
 ﻿using System;
 using UnityEngine;
-using Tiles.Components;
+using Tiles.Modules;
 using ExtensionMethods;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,22 +14,19 @@ public class SwipeManager : MonoBehaviour
     public static event Action AllMovesFinished, GlobalMoveFinished, swag;
     public static Direction CurrentDirection;
     public static PlayerTile ActiveTile { get; set; }
-    public static List<TileComponent> ComponentsSweptThisSwipe = new List<TileComponent>();
+    public static List<TileModule> ModulesSweptThisSwipe = new List<TileModule>();
 
-    private static List<(PlayerTile Tile, TileComponent tileComponent, Direction Direction)> directionsDue = new List<(PlayerTile, TileComponent, Direction)>();
-    private static List<TileComponent> finishSwipeNotify = new List<TileComponent>();
+    private static List<(PlayerTile Tile, TileModule tileModule, Direction Direction)> directionsDue = new List<(PlayerTile, TileModule, Direction)>();
+    private static List<TileModule> finishSwipeNotify = new List<TileModule>();
     private static Coord? currentCoord;
 
     private MonoBehaviour _instance;
 
     // ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡    Methods    ≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡ //
     public void Start() => instance = this;
-    public void Update()
-    {
-        if (SwipeComponent.IsSwiping) ActiveTile?.SwipingMode.BeginSwipe(SwipeComponent.SwipeDir, true);
-    }
+    public void Update() { if (SwipeDetector.IsSwiping) ActiveTile?.IntiateSwipe(SwipeDetector.SwipeDir, true); }
 
-    public static void SetActivated(TileComponent component) => ComponentsSweptThisSwipe.Add(component);
+    public static void SetActivated(TileModule component) => ModulesSweptThisSwipe.Add(component);
     public static void ShuffleFinish() { }
     public static void FinishTurn()
     {
@@ -46,13 +43,13 @@ public class SwipeManager : MonoBehaviour
         TurnManager.FinishTurn();
 
         // ---- Local Functions ---- //
-        IEnumerator allMovesFinished(float time)
+        static IEnumerator allMovesFinished(float time)
         {
             yield return new WaitForSeconds(time);
 
             AllMovesFinished?.Invoke();
         }
-        IEnumerator globalMoveFinished(float time)
+        static IEnumerator globalMoveFinished(float time)
         {
             yield return new WaitForSeconds(time);
             GlobalMoveFinished?.Invoke();
@@ -71,11 +68,11 @@ public class SwipeManager : MonoBehaviour
 
             if (!directionsDue[i].Tile.IsSwipeObstructed())
             {
-                directionsDue[i].tileComponent?.OnQueuedSwipeCalled();
-                directionsDue[i].Tile.BeginSwipe(directionsDue[i].Direction, false);
+                directionsDue[i].tileModule?.OnQueuedSwipeCalled();
+                directionsDue[i].Tile.IntiateSwipe(directionsDue[i].Direction, false);
                 directionsDue.RemoveAt(i);
             }
-            if (directionsDue.Count < 1) ComponentsSweptThisSwipe.Clear();
+            if (directionsDue.Count < 1) ModulesSweptThisSwipe.Clear();
         }
     }
     public static void BeginSwipe(Direction direction)
@@ -85,21 +82,19 @@ public class SwipeManager : MonoBehaviour
     }
     public static void Replace(PlayerTile currentTile, PlayerTile newTile)
     {
-        var s = new List<(int, string)>();
-
         if (currentTile == ActiveTile) ActiveTile = newTile;
 
         foreach (var index in directionsDue.Index())
         {
             if (directionsDue[index.index].Tile != currentTile) continue;
 
-            directionsDue[index.index] = (newTile, directionsDue[index.index].tileComponent, directionsDue[index.index].Direction);
+            directionsDue[index.index] = (newTile, directionsDue[index.index].tileModule, directionsDue[index.index].Direction);
         }
     }
-    public static void AddDirection(PlayerTile tile, Direction direction, TileComponent component = null)
+    public static void AddDirection(PlayerTile tile, Direction direction, TileModule component = null)
     {
         directionsDue.Add((tile, component, direction));
-        tile.SwipingMode.SwipeQueueIndexes.Add(directionsDue.Count - 1);
+        //tile.SwipingMode.SwipeQueueIndexes.Add(directionsDue.Count - 1);
     }
     public static void SetActiveTile<TKey>(PlayerTile tile) where TKey : ShuffleManager, IKey => ActiveTile = tile;
 }

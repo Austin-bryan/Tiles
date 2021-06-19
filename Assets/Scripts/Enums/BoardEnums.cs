@@ -1,10 +1,10 @@
 ﻿using System.Linq;
 using ExtensionMethods;
-using Tiles.Components;
+using Tiles.Modules;
 using static LayerType;
 using static TileType;
 
-public enum GameMode   { Moves, Timed, Fire, RotateOnly, Bricks }
+public enum GameMode   { Moves, Timed, Fire, Bricks }
 public enum TileType   { Normal, Gap, Wall, Camo, Iron, Brick, Steel, Nail, Screw, Ice, Balloon, Cement, Magnet, Amethyst, Bolt, Diagonal, Link, Warp, Rotate, ThisSideUp, Chess, Pawn, Rook, Knight, Bishop, King, Queen, Hybrid, Outlet, Lightbulb, TV, Tablet };
 public enum MoveType   { Swipe, Rotate, Warp }
 public enum SwipeType  { None, Bronze, Silver, Gold };
@@ -56,6 +56,6 @@ public static class TileTypeExt
         // ---- Local Functions ---- //
         void AddIfHasFlag(TileType type) { if (tileType.HasFlag(Camo)) properties.AddFlag(Camo); }
     }
-    //public static TileComponent ToTileComponent(this TileType type) =>  (TileComponent)System.Type.GetType($"Tiles.Components.{type}Component");
+    //public static TileModule ToTileModule(this TileType type) =>  (TileModule)System.Type.GetType($"Tiles.Modules.{type}Module");
     public static bool SameProperties(this TileType a, TileType b)  => a.GetProperties() == b.GetProperties();
 }

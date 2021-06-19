@@ -37,13 +37,13 @@ public abstract class Tile : GridSlot
         return GetPathName<PlayerTile>();
 
         // ---- Local Functions ---- //
-        string GetPathName<U>()
+        static string GetPathName<U>()
         {
             bool useFolderLocation = true;
             string location = "GameObjects/";
 
             return $"{(useFolderLocation ? location : "")}{typeof(U)}";
         }
-        bool IsType<V>() => typeof(T) == typeof(V);
+        static bool IsType<V>() => typeof(T) == typeof(V);
     }
 }//88

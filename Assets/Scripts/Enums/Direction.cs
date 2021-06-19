@@ -23,48 +23,39 @@ public static class DirectionUtilities
     public static bool IsVertical(this Direction dir)           => dir == Up         || dir == Down;
     public static bool IsHorizontal(this Direction dir)         => dir == Left       || dir == Right;
     public static bool IsLayer(this Direction dir)              => IsHorizontal(dir) || IsVertical(dir);
-    public static bool IsDiagonal(this Direction dir)           => IsSyncedDiag(dir) || IsUnsyncedDiag(dir);
-    public static bool IsSyncedDiag(this Direction dir)         => dir == DownRight  || dir == UpLeft;
-    public static bool IsUnsyncedDiag(this Direction dir)       => dir == UpRight    || dir == DownLeft;
+    public static bool IsOrdinal(this Direction dir)            => IsAscendingDiagonal(dir) || IsDescendingDiagonal(dir);
+    public static bool IsAscendingDiagonal(this Direction dir)  => dir == UpLeft     || dir == DownRight;
+    public static bool IsDescendingDiagonal(this Direction dir) => dir == UpRight    || dir == DownLeft;
     public static Vector2 ToVector2(this Direction dir)         => dir.ToCoord();
     public static Vector3 ToVector3(this Direction dir)         => dir.ToCoord();
     public static LayerType ToLayerType(this Direction dir)     => dir.IsHorizontal() ? Row : dir.IsVertical() ? Column : Diagonal;
     public static Coord Times  (this Direction dir, int x)      => dir.ToCoord() * x;
     public static Coord Divide (this Direction dir, int x)      => dir.ToCoord() / x;
-    public static bool Is(this Direction dir, SwipeStyle style) => style == SwipeStyle.Diagonal ? IsDiagonal(dir) : IsLayer(dir);
-    public static Coord ToCoord(this Direction dir)
+    public static bool Is(this Direction dir, SwipeStyle style) => style == SwipeStyle.Ordinal ? IsOrdinal(dir) : IsLayer(dir);
+    public static Coord ToCoord(this Direction dir) => dir switch
     {
-        switch (dir)
-        {
-            case None:       return new Coord( 0,  0);
-            case Up:         return new Coord( 0, -1);
-            case Down:       return new Coord( 0,  1);
-            case Left:       return new Coord(-1,  0);
-            case Right:      return new Coord( 1,  0);
-            case UpRight:    return new Coord( 1, -1);
-            case DownRight:  return new Coord( 1,  1);
-            case UpLeft:     return new Coord(-1, -1);
-            case DownLeft:   return new Coord(-1,  1);
-        }
-
-        return new Coord(0, 0);
-    }
-    public static Direction GetOppositeDirection(this Direction dir)
+        Up        => new Coord(0, -1),
+        Down      => new Coord(0, 1),
+        Left      => new Coord(-1, 0),
+        Right     => new Coord(1, 0),
+        UpRight   => new Coord(1, -1),
+        DownRight => new Coord(1, 1),
+        UpLeft    => new Coord(-1, -1),
+        DownLeft  => new Coord(-1, 1),
+        _ => new Coord(0, 0),
+    };
+    public static Direction GetOppositeDirection(this Direction dir) => dir switch
     {
-        switch (dir)
-        {
-            case Up:        return Down;
-            case Down:      return Up;
-            case Left:      return Right;
-            case Right:     return Left;
-            case UpRight:   return DownLeft;
-            case DownRight: return UpLeft;
-            case UpLeft:    return DownRight;
-            case DownLeft:  return UpRight;
-
-            default:        return None;
-        }
-    }
+        Up        => Down,
+        Down      => Up,
+        Left      => Right,
+        Right     => Left,
+        UpRight   => DownLeft,
+        DownRight => UpLeft,
+        UpLeft    => DownRight,
+        DownLeft  => UpRight,
+        _         => None,
+    };
 
     private static Direction Random(int a, int b) => (Direction)UnityEngine.Random.Range(a, b + 1);
 }

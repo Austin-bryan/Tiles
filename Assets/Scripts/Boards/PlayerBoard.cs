@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using Tiles.Parsing;
 using ExtensionMethods;
 using System.Collections.Generic;
 using static LayerType;
@@ -21,16 +20,12 @@ public class PlayerBoard : Board
         base.Begin();
         instance = this;
     }
-    public override void CreateBoard()
-    {
-        base.CreateBoard();
-        MiniTileBuilder.CheckAll();
-    }
+    public override void CreateBoard() => base.CreateBoard();
 
     public PlayerTile Get(Coord coord)                      => Tiles[coord.X, coord.Y] as PlayerTile;
     public PlayerTile Get(Coord coord, out PlayerTile tile) => tile = Get(coord);
-    public List<PlayerTile> GetLayer   (Coord coord, bool isRow,    ref bool foundWall) => GetStrip(coord, !isRow,   MakeCoordDelta((0,  1), (0, -1), (1, 0), (-1,  0)), ref foundWall, out List<PlayerTile> foundTiles);
-    public List<PlayerTile> GetDiagonal(Coord coord, bool isSynced, ref bool foundWall) => GetStrip(coord, isSynced, MakeCoordDelta((1, -1), (-1, 1), (1, 1), (-1, -1)), ref foundWall, out List<PlayerTile> foundTiles);
+    public List<PlayerTile> GetCardinalLayer   (Coord coord, bool isRow,    ref bool foundWall) => GetStrip(coord, !isRow,   MakeCoordDelta((0,  1), (0, -1), (1, 0), (-1,  0)), ref foundWall, out List<PlayerTile> foundTiles);
+    public List<PlayerTile> GetOrdinalLayer(Coord coord, bool isSynced, ref bool foundWall) => GetStrip(coord, isSynced, MakeCoordDelta((1, -1), (-1, 1), (1, 1), (-1, -1)), ref foundWall, out List<PlayerTile> foundTiles);
 
     private List<PlayerTile> GetStrip(Coord coord, bool isStripA, Coord[,] coordDeltas, ref bool foundWall, out List<PlayerTile> foundTiles)
     {
@@ -58,7 +53,7 @@ public class PlayerBoard : Board
             if (!workingCoord.InBoard()) break;
             Get(workingCoord, out PlayerTile tile);
 
-            if (tile?.Sides.HasComponent(TileType.Wall) ?? false)
+            if (tile?.Sides.HasModule(TileType.Wall) ?? false)
             {
                 foundWall = true;
                 break;

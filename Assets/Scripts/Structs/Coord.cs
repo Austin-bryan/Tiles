@@ -55,8 +55,8 @@ public struct Coord
     public bool IsAdjecent(Coord b)  => ((X - b.X).Abs() == 1) || ((Y - b.Y).Abs() == 1) || ((Y - b.X).Abs() == 1) || ((Y - b.X).Abs() == 1);
     public bool IsSameLayer(Coord b) => IsSameRow(b) || IsSameCol(b);
     public int GetPlayerIndex()      => X + ((Y - 1) * (Size.X));
-    public Coord GetOppositeRow()    => new Coord(GetOppositeCoordComponent(X, Size.X), Y);
-    public Coord GetOppositeCol()    => new Coord(X, GetOppositeCoordComponent(Y, Size.Y));
+    public Coord GetOppositeRow()    => new Coord(GetOppositeCoordModule(X, Size.X), Y);
+    public Coord GetOppositeCol()    => new Coord(X, GetOppositeCoordModule(Y, Size.Y));
 
     public Coord GetOppositeDiagonal()
     {
@@ -70,7 +70,7 @@ public struct Coord
         #region
             //int x, y;
 
-            //if (SwipeComponent.SwipeDir.IsUnsyncedDiag())
+            //if (SwipeModule.SwipeDir.IsUnsyncedDiag())
             //{
             //    if (BoardSize.X <= BoardSize.Y)
             //    {
@@ -185,7 +185,7 @@ public struct Coord
         }
     }
 
-    private int  GetOppositeCoordComponent(int a, int size)
+    private int  GetOppositeCoordModule(int a, int size)
     {
         if (a <= 0)        return size;
         if (a == 1)        return size + 1;

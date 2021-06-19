@@ -1,9 +1,6 @@
-﻿using UnityEngine;
-using Tiles.Factories;
+﻿using Tiles.Factories;
 using static TileType;
-using ExtensionMethods;
-using System.Collections.Generic;
-using static Tiles.Components.ComponentConstants;
+using static Tiles.Modules.ModuleConstants;
 
 namespace Tiles.Creator
 {
@@ -32,9 +29,9 @@ namespace Tiles.Creator
                 if (visibility)
                 {
                     var factory = TileFactory.GetFactory(property);
-                    tile.AddComponent(property, factory.GetComponent(tile, ParameterGetter.GetParameters(property)));
+                    tile.AddModule(property, factory.GetModule(tile, ParameterGetter.GetParameters(property)));
                 }
-                else tile.RemoveComponent(property);
+                else tile.RemoveModule(property);
             }
         }
     }

@@ -33,7 +33,7 @@ namespace Tiles.Parsing
 
             isInDelimter = true;
 
-            CreateComponent();
+            CreateModule();
             Reset();
         }
         public override void ParseSeperator()  => Error(TileSeperator);
@@ -42,7 +42,7 @@ namespace Tiles.Parsing
             if (isInDelimter) base.ParseRightBrace();
             else
             {
-                CreateComponent();
+                CreateModule();
                 ExitState(PropertyState);
             }
         }

@@ -1,14 +1,15 @@
-﻿using System;
-using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 
+// All levels are a single string that is then parsed to generate a level
+// The level the string represents is it's line number - 10; ex line 18 maps to level 8; level 0 is used to test new levels
 
 public partial class LevelManager : MonoBehaviour
 {
     public static string[] Levels = new string[]
     {
         "Test Level",
-        "3, 6, Move(10)    | r-b-b-;",
+        "5, 6, Move(10)    | r-b-y-o-pi-;",
+        "3x4, 6, Move(10)  | r-b-b-g-;",
         "5, 6, Move(20)    | pi- b- r- r- g/g{ic}/g-;",
         "6, 6, Move(30)    | y- b/x{l(1), wa(2)}/b/b/b/z{l(2), wa(1)}/ p- p/x{l(1), wa(1)}/p/p/p/z{l(2), wa(2)}/ b- y- ;",
         "5, 6, Move(20)    | y- b- p- p/<x{l(1)}, z{l(1)}>/p/p/<x{l(1)}, z{l(1)}>/ b- y- ;",
@@ -24,19 +25,6 @@ public partial class LevelManager : MonoBehaviour
         "5, 6, Move(30)    | r/r{n}/r{s}/r{bo}/r/ b/b{n, s}/b{n, bo}/b{s, bo}/b/ y/y{n, bo, s}/y/y/y/ g/g/g/g/g/ p/p/p/p/p;",
         "5, 6, Move(30)    | r- b{wa(1), am(3)}/b- g/g{ro(9, cw)}/g{wa(1)}/g- b- r-;",
         "5, 6, Move(30)    | r- b{wa(1), st(3)}/b- g/g/g{wa(1)}/g- b- r-;",
-        "3, 6, Move(30)    | r- g/g{ro(4, cw), ba}/g- b-;",
-        "9, 6, Move(30)    | r- b- g/g{ro(4, cw), ba}/g- b- r- y- pi- m- c-;",
-        "6, 6, Move(30)    | r- b- g/g{ro(4, cw), ba}/g- b- r- y-;",
-        "4, 6, Move(30)    | r- b- g/g{ro(4, cw), ba}/g- b-;",
-        "5, 6, Move(30)    | r- b- g/g{ro(4, cw), ba}/g- b- r-;",
-        "7, 6, Move(30)    | r- b- g/g{ro(4, cw), ba}/g- b- r- y- pi-;",
-        "8, 6, Move(30)    | r- b- g/g{ro(4, cw), ba}/g- b- r- y- pi- m-",
-        "5, 6, Move(30)    | r- b- g/g/g{ro(9, cw)}/g/g- b- r-;",
-        "5, 6, Move(30)    | r- b- g/g/g{ro(2, cc, mini)}/g{ro(2, cc, mini)}/g- b- r-;",
-        "5, 6, Move(30)    | r- b- g/g/g{ro(1, cc), st(5)}/g- b- r-;",
-        "5, 6, Move(30)    | r- b- g/g/g{ro(8, cc), st(5)}/g- b- r-;",
-        "5, 6, Move(30)    | r- b- g/g/g{ro(5, cc), st(5)}/g- b- r-;",
-        "5, 6, Move(30)    | r- b- g/g/g{ro(9, cc), st(5)}/g- b- r-;",
         "5, 6, Move(30)    | x/r- b/x/b- g/x/g{ir(10)}/z/g/ b/z/b- z-;",
         "9, 6, Move(30)    | r*8/r{ic}/ o*7/o{ic}- y*6/y{ic}- g*5/g{ic}- c*4/c{ic}- b*3/b{ic}- p*2/p{ic}- pi/pi{ic}- m{ic}-;",
         "8, 6, Move(30)    | r- y- r*2/b{wa(1)}/r/r/g{wa(1)}/r*2/ p- pi- b*5/b{ba, wa(2)}/b/b/ g*4/g{ic, wa(2)}/g/g/g/ pi-;",
@@ -47,36 +35,24 @@ public partial class LevelManager : MonoBehaviour
         "3, 6, Move(30)    | r- b/b{ba, ir(5)}/b/ g-;",
         "3, 6, Move(30)    | r- b/b{ca, ir(5)}/b/ g-;",
         "5, 6, Move(30)    | z- z/r/g/b/z/ z/r{ic}/g/b/z/ z/r{ic}/g/b/z/ r-;",
-        "7, 6, Move(10)    | x/r/b/z/r/b/x/ x/z/b/z/b- g/g/g/g/x- g/z/pi/z/pi- x/y/x/y/x- x- z-;",
-        "5, 6, Move(10)    | x/r/x/r/x/ b/x/x/x/b/ x/x/g/x/x/ pi/x/x/x/pi/ x/y/x/y/x;",
         "5, 6, Move(10)    | x/r/x/r/x/ b/x/b/x/b/ x/g/x/g/x/ pi/x/pi/x/pi/ x/y/x/y/x;",
-        "5, 6, Move(10)    | z/r/r/r/z/ y- b/b/z/b/b/ g- z/o/o/o/z;",
         "5, 6, Move(10)    | z/r/z/r/z/ y- z/b/z/b/z/ g- z/o/z/o/z;",
-        "5, 6, Move(30)    | z/r/r/r/r/ y- z/b/b/b/b/ g- pi-;",
         "8, 6, Move(30)    | r- y- r*2/b{wa(1)}/r/r/g{wa(1)}/r*2/ p- pi- b{ba, wa(2)}/b*7/ g{ic}*3/g*5/ pi-;",
         "9, 6, Move(30)    | r*8/r{ic}/ o*7/o{ic}- y*6/y{ic}- g*5/g{ic}- c*4/c{ic}- b*3/b{ic}- p*2/p{ic}- pi/pi{ic}- m{ic}-;",
-        "8, 6, Move(30)    | r- y- r*2/b{wa(1)}/r/r/g{wa(1)}/r*2/ p- pi- b{ba, wa(2)}/b*7/ g*4/g{ic}-/ pi-;",
         "8, 6, Move(30)    | r- y- r*2/b{wa(1)}/r/r/g{wa(1)}/r*2/ p- pi- b{ba, wa(2)}/b*7/ g*6/g{ic}*2/ pi-;",
         "6, 6, Move(30)    | p{ic}/o/p{ic}/o/p{ic}/o/ r/b{ic}/r/b{ic}/r/b{ic}/ p{ic}/o/p{ic}/o/p{ic}/o/ r/b{ic}/r/b{ic}/r/b{ic}/ p{ic}/o/p{ic}/o/p{ic}/o/ r/b{ic}/r/b{ic}/r/b{ic};",
         "5, 6, Move(30)    | z*5/ z/r/x/r/z/ z/z/r/z/z/ z/r/x/r/z/ z*5/;",
         "4, 6, Move(30)    | r*4/ o/b{ic(grid)}/o/b{ic(grid)}/ r*4/ o/p{ic(grid)}/o/p{ic(grid)};",
-        "8, 6, Move(30)    | r- y- r*2/b{wa(1)}/r/r/g{wa(1)}/r*2/ p- pi- b{ba, wa(2)}/b*7/ g*7/g{ic, wa(2)}/ pi-;",
         "8, 6, Move(30)    | r- y- r*2/b{wa(1)}/r/r/g{wa(1)}/r*2/ p- pi- b*5/b{ba, wa(2)}/b/b/ g*4/g{ic, wa(2)}/g/g/g/ pi-;",
         "8, 6, Move(30)    | r- y- r*2/b/r/r/g/r*2/ p- pi- b*5/b{ba}/b/b/ g*4/g{ic}/g/g/g/ pi-;",
         "8, 6, Move(30)    | r- y- r*2/b{wa(1)}/r/r/g{wa(1)}/r*2/ p- pi- b*5/b/b/b/ g*4/g{ba}/g/g/g/ pi-;",
-        "5, 6, Move(30)    | r- y- b/b/b{ba, ic}/b/b/ g- pi-;",
         "5, 6, Move(30)    | r- y- b/b/b{ic, ba}/b/b/ g- pi-;",
-        "5, 6, Move(30)    | r- y- b/b/b{ic}/b/b{ic}/ g- pi-;",
         "5, 6, Move(30)    | b/b/b{ba}/b/b/ g/g{ba}/g/g/g/ pi- r- y-;",
-        "5, 6, Move(30)    | r- y- b/b/b{ba}/b/b/ g/g{ba}/g/g/g/ pi-;",
         "5, 6, Move(30)    | r- y- b/b/b{ba}/b{ba}/b/ g- pi-;",
         "3, 6, Move(30)    | r- y{tl}/y/y{ol}/ b-;",
-        "3, 6, Move(30)    | r- y/y{tv}/y{ol}/ b-;",
         "3, 6, Move(30)    | r- y/y{lb}/y{ol}/ b-;",
         "5, 6, Move(30)    | r- pi- y/y/y{ba}/y/y/ b/b/b{ba}/b/b/ o-;",
-        "5, 6, Move(30)    | r- pi- y/y/y{ir(10)}/y/y/ b/b/b/b/b/ o-;",
         "5, 6, Move(30)    | r- pi- y/y/y{ca}/y/y/ b/b/b/b/b/ o-;",
-        "5, 6, Move(30)    | r- pi- y/y/y/y/y/ b/b/b{ba}/b/b/ o-;",
         "7, 6, Move(30)    | r- y/y{tv}/y/y/y/y{ol}/y/ b-r-g-y-pi-;",
         "3, 6, Move(30)    | r- y/y{ol}/y{ol}/ b-;",
         "5, 6, Move(30)    | r- y- b/b{ch(r, b)}/b/b{ch(r, w)}/b/ g- m-;",
@@ -124,11 +100,6 @@ public partial class LevelManager : MonoBehaviour
         "3, 6, Move(10)    | r- y/y{ro(1, cw), up}/y{ro(1, cc), ir(10)}/ b-;",
         "3, 6, Move(10)    | r/r/r/ y/y/y/ b/b/b;",
         "3, 6, Move(10)    | r- y/y/y/ b-;",
-        "9x3, 6, Move(10)  | r- y- b-;",
-        "5x3, 6, Move(10)  | r- y- b-;",
-        "8x3, 6, Move(10)  | r- y- b-;",
-        "7x3, 6, Move(10)  | r- y- b-;",
-        "6x3, 6, Move(10)  | r- y- b-;",
         "4x3, 6, Move(10)  | r- y- b-;",
         "5, 6, Move(100)   | r/ o/<b {n(grid), l(1, grid)}, b{l(1, grid)}>/pi/p/   " +
         "                    r/o/<b {n(grid), l(1, grid)}, b{l(1, grid)}>/pi/p/    " +

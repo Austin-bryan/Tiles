@@ -7,8 +7,8 @@ public class TargetTile : Tile
     public Coord D = default;
     public int X = 23;
 
-    private bool idVisible    = true;
-    private bool coordVisible = false;
+    private readonly bool idVisible    = true;
+    private readonly bool coordVisible = false;
 
     public override void BeginPlay()
     {

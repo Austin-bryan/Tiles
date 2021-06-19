@@ -7,7 +7,7 @@ public partial class LevelManager : MonoBehaviour
 {
     [serial] Text levelText;
 
-    public static  int CurrentLevel     = 17;
+    public static  int CurrentLevel     = 1;
     public static  string CreatorName   => "Creator";
     public static  bool LevelZeroIsMade = true;
     private static bool hasBeenCreated;

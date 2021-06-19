@@ -61,7 +61,7 @@ public class ShuffleManager : MonoBehaviour
             curDirection  = DirectionUtilities.Random(curLayerType);
             curLayerType  = curLayerType.GetOppositeType();
 
-            playerTile?.BeginSwipe(curDirection, false);
+            playerTile?.IntiateSwipe(curDirection, false);
             swipesRemaining--;
 
             if (swipesRemaining > 0) StartCoroutine(SwipeRandomLayer(time));

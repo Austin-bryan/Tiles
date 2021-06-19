@@ -1,13 +1,13 @@
-﻿using static TileType;
-using Tiles.Components;
-using static PathDebugger;
+﻿using Tiles.Modules;
 using System.Collections.Generic;
+using static TileType;
+using static PathDebugger;
 
 namespace Tiles.Factories
 {
     public abstract class TileFactory
     {
-        public abstract TileComponent GetComponent(PlayerTile parentTile, List<string> parameters, bool isGrid = false);
+        public abstract TileModule GetModule(PlayerTile parentTile, List<string> parameters, bool isGrid = false);
 
         public static TileFactory GetFactory(TileType tileType)
         {
@@ -22,13 +22,11 @@ namespace Tiles.Factories
                 case Gap:        return new GapFactory();
                 case Wall:       return new WallFactory();
                 case Screw:      return new ScrewFactory();
-                case Steel:      return new SteelFactory();
                 case Bolt:       return new BoltFactory();
                 case Amethyst:   return new AmethystFactory();
                 case Diagonal:   return new DiagonalFactory();
                 case Link:       return new LinkFactory();
                 case Warp:       return new WarpFactory();
-                case Rotate:     return new RotateFactory();
                 case ThisSideUp: return new ThisSideUpFactory();
                 case Chess:      return new ChessFactory();
                 case Pawn:       return new PawnFactory();

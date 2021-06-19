@@ -1,15 +1,15 @@
 ﻿using System.Linq;
 using UnityEngine;
+using Tiles.Modules;
 using Tiles.Creator;
 using UnityEngine.UI;
+using ExtensionMethods;
+using System.Collections.Generic;
 using static TileType;
 using static ColorExt;
-using ExtensionMethods;
-using Tiles.Components;
 using static BoardManager;
 using static TileSelector;
 using static PathDebugger;
-using System.Collections.Generic;
 
 public class CreatorTile : PlayerTile
 {
@@ -18,7 +18,7 @@ public class CreatorTile : PlayerTile
     public TileType Type         { get; set; }
     public ColorShade ColorShade { get; set; }
     public IEnumerable<TileType> Properties { get {
-            foreach (var component in Sides.CurrentSideComponents)
+            foreach (var component in Sides.CurrentSideModules)
                 yield return component.TileType;
         }
     }
@@ -110,21 +110,21 @@ public class CreatorTile : PlayerTile
             if (needsToRefreshColor) RefreshColor();
         }
     }
-    public override void AddComponent(TileType type, TileComponent component)
+    public override void AddModule(TileType type, TileModule component)
     {
         if (!Properties.ToList().Contains(component.TileType))
-            Sides.AddComponent(type, component); 
+            Sides.AddModule(type, component); 
     }
-    public void RemoveComponent(TileType property)
+    public void RemoveModule(TileType property)
     {
-        var components = Sides.CurrentSideComponents.ToArray();
+        var components = Sides.CurrentSideModules.ToArray();
 
         foreach (var component in components)
         {
             if (component.TileType != property) continue;
 
             component.Show();
-            //Sides.RemoveComponent(component);
+            //Sides.RemoveModule(component);
         }
     }
     public void Deselect()

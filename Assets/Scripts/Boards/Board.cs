@@ -166,7 +166,7 @@ public class Board : MonoBehaviour, IBoard
         int marginBuff() => hasMargins ? 0 : -1;
     }
 
-    // ---- Get Coord Components ---- //
+    // ---- Get Coord Modules ---- //
     private Transform GetX(Transform transform)              => GetX(transform, currentCoord);
     private Transform GetY(Transform transform)              => GetY(transform, currentCoord);
     private Transform GetX(Transform transform, Coord coord) => transform.SubLocX(getLayerOffset(coord.X, useCompression: false) + firstColOffset);
